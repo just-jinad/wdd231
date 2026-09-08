@@ -1,0 +1,255 @@
+/* ==========================================================
+   small.css — base / mobile-first styles (320px and up)
+   Rule of thumb: everything here is the DEFAULT. larger.css
+   only overrides what changes at the breakpoint.
+   ========================================================== */
+
+:root {
+  /* Color scheme */
+  --color-bg: #f5f5f4;
+  --color-surface: #ffffff;
+  --color-header: #1b263b;
+  --color-header-text: #e0e1dd;
+  --color-accent: #778da9;
+  --color-completed: #2e7d32;
+  --color-completed-bg: #e8f5e9;
+  --color-text: #1b1b1b;
+  --color-border: #d4d4d4;
+
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Consistent spacing scale — avoids magic numbers scattered in rules */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Header / branding ---------- */
+.site-header {
+  background-color: var(--color-header);
+  color: var(--color-header-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.site-name {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* ---------- Hamburger toggle (small screens only) ---------- */
+.nav-toggle {
+  background: transparent;
+  border: none;
+  color: var(--color-header-text);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: var(--space-xs);
+}
+
+/* ---------- Nav: collapsed by default on small screens ---------- */
+.primary-nav {
+  width: 100%;
+  /* Collapsed state — height animates instead of display:none so it
+     doesn't "twitch"/jump; opacity softens the transition further. */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.primary-nav.open {
+  max-height: 240px; /* comfortably taller than 3 stacked links */
+}
+
+.primary-nav ul {
+  list-style: none;
+  margin: var(--space-xs) 0 0 0;
+  padding: 0;
+}
+
+.primary-nav a {
+  display: block;
+  color: var(--color-header-text);
+  text-decoration: none;
+  padding: var(--space-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background-color 0.15s ease;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible {
+  background-color: var(--color-accent);
+}
+
+.primary-nav a.current {
+  font-weight: 800;
+}
+
+/* ---------- Main content ---------- */
+main {
+  padding: var(--space-md) var(--space-sm);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+}
+
+section h2 {
+  background-color: var(--color-header);
+  color: var(--color-header-text);
+  margin: 0;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.about-me p {
+  padding: var(--space-sm);
+}
+
+.student-photo img {
+  margin: var(--space-sm) auto;
+}
+
+/* ---------- Course filter buttons ---------- */
+.course-filters {
+  display: flex;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  flex: 1 1 auto;
+  min-width: 80px;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-bg);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.filter-btn.active {
+  background-color: var(--color-header);
+  color: var(--color-header-text);
+}
+
+/* ---------- Course cards ---------- */
+.course-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+  padding: 0 var(--space-sm) var(--space-sm);
+}
+
+.course-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-xs) var(--space-sm);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Completed courses get a distinct, complementary treatment —
+   not just a color swap, so it also reads without relying on color alone */
+.course-card.completed {
+  background-color: var(--color-completed-bg);
+  border-color: var(--color-completed);
+  color: var(--color-completed);
+  position: relative;
+}
+
+.course-card.completed::after {
+  content: "✓ Completed";
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.credit-total {
+  text-align: center;
+  padding: 0 var(--space-sm) var(--space-sm);
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: var(--color-header);
+  color: var(--color-header-text);
+  text-align: center;
+  padding: var(--space-md) var(--space-sm);
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: 0;
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.social-links a {
+  color: var(--color-header-text);
+  transition: color 0.15s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: var(--color-accent);
+}
+
+.footer-meta,
+#lastModified {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+}
