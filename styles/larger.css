@@ -6,6 +6,11 @@
 
 @media (min-width: 700px) {
 
+  .site-header {
+    display: block;
+    padding: 0;
+  }
+
   .nav-toggle {
     display: none;
   }
@@ -14,19 +19,29 @@
      don't need max-height tricks, which removes any risk of the
      "twitch on hover" the rubric explicitly checks for. */
   .primary-nav {
-    width: auto;
+    width: 100%;
     max-height: none;
     overflow: visible;
+    background-color: #1b1b1b;
   }
 
   .primary-nav ul {
     display: flex;
     margin: 0;
+    gap: 0;
   }
 
   .primary-nav a {
     border-top: none;
+    padding: 0.25rem 0.75rem;
+    white-space: nowrap;
+  }
+
+  .branding {
+    min-height: 3.25rem;
     padding: var(--space-xs) var(--space-sm);
+    background-color: var(--color-surface);
+    color: var(--color-text);
   }
 
   /* Two-column layout: About Me + Student Photo side by side.
@@ -36,14 +51,15 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-      "about photo"
+      "title   title"
+      "about   photo"
       "courses courses";
     gap: var(--space-md);
     align-items: start;
   }
 
   main h1 {
-    grid-column: 1 / -1;
+    grid-area: title;
   }
 
   .about-me   { grid-area: about; }

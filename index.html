@@ -7,19 +7,18 @@
   <meta name="description" content="Home page for the WDD231 course portfolio, showcasing course progress and personal information.">
   <meta name="author" content="Your Name">
 
-  <!-- Google Fonts: single family, two weights (regular body / bold headings) -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Mobile-first CSS, then the breakpoint file with the media query -->
+ 
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <!-- defer: script downloads in parallel with parsing, runs after DOM is ready, in document order -->
+
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
-  <!-- type="module": deferred by spec, strict mode, own scope — no defer attribute needed -->
   <script src="scripts/course.js" type="module"></script>
 </head>
 <body>
@@ -27,7 +26,7 @@
   <header class="site-header">
     <div class="branding">
       <img src="images/logo.svg" alt="" width="40" height="40" class="logo">
-      <span class="site-name">Your Name</span>
+      <span class="site-name">Tope Jinad</span>
     </div>
     <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
       <span class="hamburger-icon" aria-hidden="true">&#9776;</span>
@@ -35,8 +34,8 @@
     <nav id="primary-nav" class="primary-nav">
       <ul>
         <li><a href="index.html" class="current" aria-current="page">Home</a></li>
-        <li><a href="chamber/index.html">Chamber</a></li>
-        <li><a href="final/index.html">Final</a></li>
+        <li><a href="chamber/index.html">Chamber Project</a></li>
+        <li><a href="final/index.html">Final Project</a></li>
       </ul>
     </nav>
   </header>
@@ -47,16 +46,14 @@
     <section class="about-me" aria-labelledby="about-heading">
       <h2 id="about-heading">About Me</h2>
       <p>
-        Write a short, genuine bio here — program, interests, and what
-        you're building toward. Two to three sentences is plenty; this
-        section is graded on structure and legibility, not word count.
+       I am a Software Engineering student and frontend developer interested in building practical, user-friendly digital products. I enjoy working with technologies like React and Next.js, and I am building toward becoming a well-rounded software engineer who creates solutions that make a real impact.
+
       </p>
     </section>
 
     <section class="student-photo" aria-labelledby="photo-heading">
       <h2 id="photo-heading">Student Photo</h2>
-      <!-- Replace with an optimized (<125KB) photo of yourself before submission -->
-      <img src="images/student-photo-placeholder.svg" alt="Photo of Your Name" width="280" height="280" loading="lazy">
+      <img src="images/jinad.jpeg" alt="Photo of Your Name" width="280" height="280" loading="lazy">
     </section>
 
     <section class="courses" aria-labelledby="courses-heading">
@@ -99,7 +96,7 @@
     </ul>
 
     <p class="footer-meta">
-      &copy; <span id="currentyear"></span> Your Name &bull; Utah, USA
+      &copy; <span id="currentyear"></span> Tope Jinad &bull; Oyo, Nigeria
     </p>
     <p id="lastModified"></p>
   </footer>
