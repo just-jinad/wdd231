@@ -1,6 +1,4 @@
-// course.js — course data, rendering, filtering, credit totals
-// type="module" in the <head> means this already runs after parsing
-// and in strict mode; no defer attribute or DOMContentLoaded needed.
+
 
 const courses = [
   {
@@ -8,7 +6,6 @@ const courses = [
     credits: 2, certificate: 'Web and Computer Programming',
     description: 'Introduces variables, decisions, calculations, loops, arrays, and input/output.',
     technology: ['Python'],
-    // TODO: set to true for every course you've actually completed.
     completed: false
   },
   {
@@ -52,15 +49,9 @@ const cardContainer = document.getElementById('course-cards');
 const creditTotalEl = document.getElementById('credit-total');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
-/**
- * Renders a set of course cards and updates the credit total.
- * Kept pure-ish: takes the array to render, doesn't reach outside
- * for filter state, so it's trivially reusable/testable.
- */
-function renderCourses(list) {
-  cardContainer.innerHTML = ''; // simplest correct approach at this scale;
-                                  // a diffing renderer would be overkill for 6 static cards
 
+function renderCourses(list) {
+  cardContainer.innerHTML = '';
   list.forEach(course => {
     const card = document.createElement('div');
     card.className = course.completed ? 'course-card completed' : 'course-card';
