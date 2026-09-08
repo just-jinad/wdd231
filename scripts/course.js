@@ -21,7 +21,7 @@ const courses = [
     description: 'Writing, calling, debugging, and testing functions; handling errors within functions.',
     technology: ['Python'],
     completed: false
-  },
+  },                                                                      
   {
     subject: 'CSE', number: 210, title: 'Programming with Classes',
     credits: 2, certificate: 'Web and Computer Programming',
