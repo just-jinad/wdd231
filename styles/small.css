@@ -11,7 +11,7 @@
   --color-text: #1b1b1b;
   --color-border: #d4d4d4;
 
-  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
