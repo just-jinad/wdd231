@@ -9,22 +9,29 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  </noscript>
 
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css" media="(min-width: 700px)">
 
-
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
-  <script src="scripts/course.js" type="module"></script>
+  <script src="scripts/course.js" defer></script>
 </head>
 <body>
 
   <header class="site-header">
     <div class="branding">
-      <img src="images/logo.svg" alt="" width="40" height="40" class="logo">
-      <span class="site-name">Tope Jinad</span>
+      <a href="index.html" class="brand-link">
+        <img src="images/logo.svg" alt="" width="40" height="40" class="logo">
+        <span class="site-name">Tope Jinad</span>
+      </a>
     </div>
     <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
       <span class="hamburger-icon" aria-hidden="true">&#9776;</span>
@@ -45,7 +52,6 @@
       <h2 id="about-heading">About Me</h2>
       <p>
        I am a Software Engineering student and frontend developer interested in building practical, user-friendly digital products. I enjoy working with technologies like React and Next.js, and I am building toward becoming a well-rounded software engineer who creates solutions that make a real impact.
-
       </p>
     </section>
 
