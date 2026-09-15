@@ -18,10 +18,6 @@
     padding: 0 var(--space-md);
   }
 
-  .header-controls {
-    order: 3;
-  }
-
   .site-header {
     flex-wrap: nowrap;
   }

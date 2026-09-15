@@ -55,7 +55,7 @@
       "tagline": "Livestock feed and veterinary supplies",
       "address": "18 Arowomole Street, Ogbomoso, Oyo State",
       "phone": "+234 810 555 0106",
-      "url": "https://rancetershub.example.com",
+      "url": "https://ranchershub.example.com",
       "image": "ranchers-hub.jpg",
       "membership": 1,
       "category": "Agriculture"
@@ -69,6 +69,87 @@
       "image": "kaystone-tech.jpg",
       "membership": 3,
       "category": "Technology"
+    },
+
+    {
+      "name": "Oyo Harvest Foods",
+      "tagline": "Locally sourced grains, spices, and packaged foods",
+      "address": "16 Isale Ora Road, Ogbomoso, Oyo State",
+      "phone": "+234 814 555 0108",
+      "url": "https://oyoharvest.example.com",
+      "image": "oyo-harvest.jpg",
+      "membership": 2,
+      "category": "Food & Beverage"
+    },
+    {
+      "name": "Aso-Oke Craft House",
+      "tagline": "Handwoven aso-oke fabrics and traditional accessories",
+      "address": "27 Sabo Road, Ogbomoso, Oyo State",
+      "phone": "+234 805 555 0109",
+      "url": "https://aso-oke-craft.example.com",
+      "image": "aso-oke-craft.jpg",
+      "membership": 3,
+      "category": "Retail & Fashion"
+    },
+    {
+      "name": "GreenFields Farm Services",
+      "tagline": "Crop production support and modern farming solutions",
+      "address": "8 Igbeti Road, Ogbomoso, Oyo State",
+      "phone": "+234 811 555 0110",
+      "url": "https://greenfieldsfarm.example.com",
+      "image": "greenfields-farm.jpg",
+      "membership": 2,
+      "category": "Agriculture"
+    },
+    {
+      "name": "BrightPath Learning Centre",
+      "tagline": "Digital skills and professional training for young people",
+      "address": "41 Bowen Road, Ogbomoso, Oyo State",
+      "phone": "+234 816 555 0111",
+      "url": "https://brightpathlearning.example.com",
+      "image": "brightpath-learning.jpg",
+      "membership": 3,
+      "category": "Education & Training"
+    },
+    {
+      "name": "Royal Auto Care",
+      "tagline": "Reliable vehicle diagnostics, maintenance, and repairs",
+      "address": "14 Ilorin Road, Ogbomoso, Oyo State",
+      "phone": "+234 803 555 0112",
+      "url": "https://royalautocare.example.com",
+      "image": "royal-auto-care.jpg",
+      "membership": 1,
+      "category": "Automotive"
+    },
+    {
+      "name": "Ogbomoso Digital Works",
+      "tagline": "Web design, branding, and digital marketing services",
+      "address": "6 Takie Road, Ogbomoso, Oyo State",
+      "phone": "+234 809 555 0113",
+      "url": "https://ogbomosodigital.example.com",
+      "image": "ogbomoso-digital.jpg",
+      "membership": 2,
+      "category": "Technology"
+    },
+    {
+      "name": "Akinola Furniture Works",
+      "tagline": "Custom furniture crafted for homes and businesses",
+      "address": "22 Arowomole Street, Ogbomoso, Oyo State",
+      "phone": "+234 807 555 0114",
+      "url": "https://akinolafurniture.example.com",
+      "image": "akinola-furniture.jpg",
+      "membership": 1,
+      "category": "Manufacturing"
+    },
+    {
+      "name": "Golden Palm Events",
+      "tagline": "Event planning, decoration, and venue services",
+      "address": "19 Bowen Road, Ogbomoso, Oyo State",
+      "phone": "+234 812 555 0115",
+      "url": "https://goldenpalmevents.example.com",
+      "image": "golden-palm-events.jpg",
+      "membership": 2,
+      "category": "Events & Hospitality"
     }
   ]
 }
