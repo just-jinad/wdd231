@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directory | Ogbomoso Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Browse member businesses of the Ogbomoso Chamber of Commerce."
+    />
+    <meta name="author" content="Tope Jinad" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <!--
+      TODO before submitting: og:url and og:image below use a placeholder GitHub Pages
+      pattern. Replace <your-github-username> and <repo-name> with your real values,
+      or the Facebook Sharing Debugger will not resolve this page correctly.
+      Also confirm the og:image file actually exists at that path once deployed.
+    -->
+    <meta property="og:title" content="Ogbomoso Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Promoting local businesses, fostering economic growth, and building a stronger Ogbomoso business community."
+    />
+    <meta
+      property="og:image"
+      content="https://<your-github-username>.github.io/<repo-name>/chamber/images/adire-heritage.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://<your-github-username>.github.io/<repo-name>/chamber/directory.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/small.css" />
+    <link rel="stylesheet" href="./styles/larger.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="branding">
+        <img src="./favicon/favicon-32x32.png" alt="" width="36" height="36" />
+        <span>Ogbomoso Chamber of Commerce</span>
+      </div>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+
+      <nav id="primary-nav" class="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="directory.html" aria-current="page">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="discover.html">Discover</a>
+        
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+          &#9680;
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="directory-heading">Directory</h1>
+
+      <div class="view-toggle" role="group" aria-label="Directory view selection">
+        <button id="grid-view-btn" aria-pressed="true">Grid</button>
+        <button id="list-view-btn" aria-pressed="false">List</button>
+      </div>
+
+      <section id="member-list" class="member-list" aria-live="polite">
+        <!-- Member cards injected here via directory.js -->
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p><strong>Ogbomoso Chamber of Commerce</strong></p>
+        <p>Takie Road, Ogbomoso, Oyo State, Nigeria</p>
+        <p>info@ogbomosocc.org</p>
+      </div>
+
+      <div class="socials">
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">X</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      </div>
+
+      <div>
+        <p>WDD 231 Class Project</p>
+        <p>Tope Jinad</p>
+        <p>&copy; <span id="current-year"></span> Ogbomoso Chamber of Commerce</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+      </div>
+    </footer>
+
+    <script src="./scripts/directory.js"></script>
+  </body>
+</html>

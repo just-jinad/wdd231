@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Adire Heritage Textiles",
+      "tagline": "Traditional Yoruba adire, made and sold locally",
+      "address": "12 Takie Road, Ogbomoso, Oyo State",
+      "phone": "+234 803 555 0101",
+      "url": "https://adireheritage.example.com",
+      "image": "adire-heritage.jpg",
+      "membership": 3,
+      "category": "Retail & Fashion"
+    },
+    {
+      "name": "LAUTECH Agro Supplies",
+      "tagline": "Farm inputs and equipment for local growers",
+      "address": "5 Ilorin Road, Ogbomoso, Oyo State",
+      "phone": "+234 806 555 0102",
+      "url": "https://lautechagro.example.com",
+      "image": "lautech-agro.jpg",
+      "membership": 3,
+      "category": "Agriculture"
+    },
+    {
+      "name": "Ogbomoso Bakes",
+      "tagline": "Fresh bread and pastries, baked daily",
+      "address": "21 Aleshinloye Street, Ogbomoso, Oyo State",
+      "phone": "+234 807 555 0103",
+      "url": "https://ogbomosobakes.example.com",
+      "image": "ogbomoso-bakes.jpg",
+      "membership": 2,
+      "category": "Food & Beverage"
+    },
+    {
+      "name": "Taye Motors & Auto Parts",
+      "tagline": "Vehicle repair, servicing, and genuine parts",
+      "address": "9 Old Ipetu Road, Ogbomoso, Oyo State",
+      "phone": "+234 802 555 0104",
+      "url": "https://tayemotors.example.com",
+      "image": "taye-motors.jpg",
+      "membership": 2,
+      "category": "Automotive"
+    },
+    {
+      "name": "Sunrise Textiles Ltd",
+      "tagline": "Wholesale fabric supply across Oyo State",
+      "address": "33 Isale Afon Road, Ogbomoso, Oyo State",
+      "phone": "+234 809 555 0105",
+      "url": "https://sunrisetextiles.example.com",
+      "image": "sunrise-textiles.jpg",
+      "membership": 1,
+      "category": "Wholesale"
+    },
+    {
+      "name": "Ranchers Hub",
+      "tagline": "Livestock feed and veterinary supplies",
+      "address": "18 Arowomole Street, Ogbomoso, Oyo State",
+      "phone": "+234 810 555 0106",
+      "url": "https://rancetershub.example.com",
+      "image": "ranchers-hub.jpg",
+      "membership": 1,
+      "category": "Agriculture"
+    },
+    {
+      "name": "Kaystone Tech Solutions",
+      "tagline": "IT support and web services for local businesses",
+      "address": "44 Sabo Road, Ogbomoso, Oyo State",
+      "phone": "+234 813 555 0107",
+      "url": "https://kaystonetech.example.com",
+      "image": "kaystone-tech.jpg",
+      "membership": 3,
+      "category": "Technology"
+    }
+  ]
+}

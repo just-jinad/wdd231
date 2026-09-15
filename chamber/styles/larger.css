@@ -1,0 +1,54 @@
+/* larger.css — enhancements for wider viewports (768px+) */
+
+@media screen and (min-width: 48em) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .primary-nav {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    border-bottom: none;
+    background-color: transparent;
+  }
+
+  .primary-nav a {
+    border-top: none;
+    padding: 0 var(--space-md);
+  }
+
+  .header-controls {
+    order: 3;
+  }
+
+  .site-header {
+    flex-wrap: nowrap;
+  }
+
+  .member-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main {
+    padding: var(--space-xl);
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .member-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .member-list.list-view {
+    grid-template-columns: 1fr;
+  }
+}
