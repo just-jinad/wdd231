@@ -55,7 +55,7 @@
       "tagline": "Livestock feed and veterinary supplies",
       "address": "18 Arowomole Street, Ogbomoso, Oyo State",
       "phone": "+234 810 555 0106",
-      "url": "ranchershub.example.com",
+      "url": "https://ranchershub.example.com",
       "image": "./images/farm_ranch.jpg",
       "membership": 1,
       "category": "Agriculture"
