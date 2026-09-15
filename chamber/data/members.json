@@ -6,7 +6,7 @@
       "address": "12 Takie Road, Ogbomoso, Oyo State",
       "phone": "+234 803 555 0101",
       "url": "https://adireheritage.example.com",
-      "image": "adire-heritage.jpg",
+      "image": "https://i.pinimg.com/736x/1b/e5/de/1be5de9443755b07c93dd83e29256670.jpg",
       "membership": 3,
       "category": "Retail & Fashion"
     },
@@ -16,7 +16,7 @@
       "address": "5 Ilorin Road, Ogbomoso, Oyo State",
       "phone": "+234 806 555 0102",
       "url": "https://lautechagro.example.com",
-      "image": "lautech-agro.jpg",
+      "image": "https://i.pinimg.com/1200x/cd/46/cf/cd46cf71d2bb300157f1c4fb77a30584.jpg",
       "membership": 3,
       "category": "Agriculture"
     },
@@ -26,7 +26,7 @@
       "address": "21 Aleshinloye Street, Ogbomoso, Oyo State",
       "phone": "+234 807 555 0103",
       "url": "https://ogbomosobakes.example.com",
-      "image": "ogbomoso-bakes.jpg",
+      "image": "https://i.pinimg.com/736x/93/1c/78/931c780fbbf087ac3372bb5c92c125b2.jpg",
       "membership": 2,
       "category": "Food & Beverage"
     },
@@ -36,7 +36,7 @@
       "address": "9 Old Ipetu Road, Ogbomoso, Oyo State",
       "phone": "+234 802 555 0104",
       "url": "https://tayemotors.example.com",
-      "image": "taye-motors.jpg",
+      "image": "https://i.pinimg.com/1200x/1e/60/0d/1e600d4a9abefa0ec02f22dc2f190820.jpg",
       "membership": 2,
       "category": "Automotive"
     },
@@ -46,7 +46,7 @@
       "address": "33 Isale Afon Road, Ogbomoso, Oyo State",
       "phone": "+234 809 555 0105",
       "url": "https://sunrisetextiles.example.com",
-      "image": "sunrise-textiles.jpg",
+      "image": "https://i.pinimg.com/736x/61/8c/2f/618c2f52ed399db9ebb6731ecbb83dc5.jpg",
       "membership": 1,
       "category": "Wholesale"
     },
@@ -55,7 +55,7 @@
       "tagline": "Livestock feed and veterinary supplies",
       "address": "18 Arowomole Street, Ogbomoso, Oyo State",
       "phone": "+234 810 555 0106",
-      "url": "https://ranchershub.example.com",
+      "url": "https://i.pinimg.com/1200x/12/4b/51/124b512875019f1e9a8d289ca2a7dd29.jpg",
       "image": "ranchers-hub.jpg",
       "membership": 1,
       "category": "Agriculture"
@@ -66,7 +66,7 @@
       "address": "44 Sabo Road, Ogbomoso, Oyo State",
       "phone": "+234 813 555 0107",
       "url": "https://kaystonetech.example.com",
-      "image": "kaystone-tech.jpg",
+      "image": "https://i.pinimg.com/1200x/00/24/25/002425839a96b3f4b1711a5345c37c82.jpg",
       "membership": 3,
       "category": "Technology"
     },

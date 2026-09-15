@@ -15,7 +15,7 @@ const membershipLabels = {
 
 async function getMembers() {
   try {
-    const response = await fetch("./members.json");
+    const response = await fetch("./data/members.json");
     if (!response.ok) {
       throw new Error(`Fetch failed with status ${response.status}`);
     }
@@ -34,7 +34,7 @@ function renderMembers(members) {
     const card = document.createElement("article");
     card.className = "member-card";
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="300" height="300">
+      <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="300" height="300">
       <div class="card-body">
         <span class="badge level-${member.membership}">${membershipLabels[member.membership]}</span>
         <h3>${member.name}</h3>
