@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Ogbomoso Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Ogbomoso Chamber of Commerce — connecting local businesses, hosting events, and growing the Ogbomoso economy."
+    />
+    <meta name="author" content="Tope Jinad" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <!--
+      TODO before submitting: og:url and og:image use a placeholder GitHub Pages
+      pattern. Replace <your-github-username> and <repo-name> with your real values.
+    -->
+    <meta property="og:title" content="Ogbomoso Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Promoting local businesses, fostering economic growth, and building a stronger Ogbomoso business community."
+    />
+    <meta
+      property="og:image"
+      content="https://<your-github-username>.github.io/<repo-name>/chamber/images/hero.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://<your-github-username>.github.io/<repo-name>/chamber/index.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/small.css" />
+    <link rel="stylesheet" href="./css/larger.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="branding">
+        <img src="./favicon/favicon-32x32.png" alt="" width="36" height="36" />
+        <span>Ogbomoso Chamber of Commerce</span>
+      </div>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+
+      <nav id="primary-nav" class="primary-nav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="directory.html">Business Directory</a>
+        <a href="join.html">Join</a>
+        <a class="disabled" tabindex="-1" aria-disabled="true">About</a>
+        <a class="disabled" tabindex="-1" aria-disabled="true">Podcast</a>
+        <a class="disabled" tabindex="-1" aria-disabled="true">Events</a>
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+          &#9680;
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img
+          src="images/hero.jpg"
+          alt="Ogbomoso Chamber of Commerce — supporting local businesses"
+          width="1600"
+          height="600"
+        />
+        <div class="hero-content">
+          <h1>Grow Your Business in Ogbomoso</h1>
+          <p>Join a network of local business owners building a stronger Ogbomoso economy together.</p>
+          <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+      </section>
+
+      <div class="info-grid">
+        <section class="events" aria-labelledby="events-heading">
+          <h2 id="events-heading">Upcoming Events</h2>
+
+          <div class="event-item">
+            <span class="event-date">Oct 4</span>
+            <div>
+              <p><strong>Business Networking Mixer</strong></p>
+              <p>Meet fellow chamber members over refreshments at the Chamber Hall.</p>
+            </div>
+          </div>
+
+          <div class="event-item">
+            <span class="event-date">Oct 18</span>
+            <div>
+              <p><strong>Small Business Grant Workshop</strong></p>
+              <p>Learn how to apply for local and state SME grant programs.</p>
+            </div>
+          </div>
+
+          <div class="event-item">
+            <span class="event-date">Nov 8</span>
+            <div>
+              <p><strong>Ogbomoso Annual Trade Fair</strong></p>
+              <p>Showcase your business to hundreds of local shoppers and visitors.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="weather-section" aria-labelledby="weather-heading">
+          <h2 id="weather-heading">Ogbomoso Weather</h2>
+
+          <div class="current-weather">
+            <img id="weather-icon" src="" alt="" width="64" height="64" />
+            <div>
+              <p id="current-temp" class="temp">&mdash;&deg;C</p>
+              <p id="current-desc">Loading forecast&hellip;</p>
+            </div>
+          </div>
+
+          <ul id="forecast-list" class="forecast-list" aria-label="3-day forecast"></ul>
+        </section>
+      </div>
+
+      <section class="spotlights" aria-labelledby="spotlights-heading">
+        <h2 id="spotlights-heading">Member Spotlights</h2>
+        <div id="spotlight-list" class="member-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p><strong>Ogbomoso Chamber of Commerce</strong></p>
+        <p>Takie Road, Ogbomoso, Oyo State, Nigeria</p>
+        <p>info@ogbomosocc.org</p>
+      </div>
+
+      <div class="socials">
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">X</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      </div>
+
+      <div>
+        <p>WDD 231 Class Project</p>
+        <p>Tope Jinad</p>
+        <p>&copy; <span id="current-year"></span> Ogbomoso Chamber of Commerce</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+      </div>
+    </footer>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/home.js"></script>
+  </body>
+</html>
