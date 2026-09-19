@@ -48,3 +48,41 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Hero: overlay layout at wider viewports ---------- */
+@media screen and (min-width: 48em) {
+  .hero img {
+    max-height: 420px;
+  }
+
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 var(--space-2xl);
+    background: linear-gradient(90deg, rgba(28, 25, 23, 0.65) 0%, rgba(28, 25, 23, 0) 70%);
+  }
+
+  .hero-content h1,
+  .hero-content p {
+    color: #FFFFFF;
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem;
+    max-width: 30ch;
+  }
+
+  .hero-content p {
+    max-width: 40ch;
+  }
+
+  /* ---------- Info grid: events + weather side by side ---------- */
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

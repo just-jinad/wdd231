@@ -1,12 +1,5 @@
-// home.js — Ogbomoso Chamber of Commerce home page
-// Requires common.js to be loaded first (handles nav/theme/footer).
-
-// TODO: replace with your own free key from https://openweathermap.org/api
-const WEATHER_API_KEY = "YOUR_OPENWEATHERMAP_API_KEY";
-
-// Ogbomoso, Oyo State, Nigeria — approximate coordinates
-const LAT = 8.1300;
-const LON = 4.2400;
+const LAT = 8.13;
+const LON = 4.24;
 
 const membershipLabels = {
   1: "Member",
@@ -14,10 +7,8 @@ const membershipLabels = {
   3: "Gold",
 };
 
-// ---------- Weather ----------
-
 async function getCurrentWeather() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&appid=${WEATHER_API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&APPID=06665bb7d373a525fa91ec93a2beca88`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Current weather fetch failed: ${response.status}`);
@@ -26,7 +17,7 @@ async function getCurrentWeather() {
 }
 
 async function getForecast() {
-  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&appid=${WEATHER_API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&APPID=06665bb7d373a525fa91ec93a2beca88`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Forecast fetch failed: ${response.status}`);
@@ -47,9 +38,6 @@ function renderForecast(data) {
   const list = document.querySelector("#forecast-list");
   list.innerHTML = "";
 
-  // The free-tier forecast endpoint returns 3-hour steps for 5 days.
-  // Taking the midday (12:00:00) reading for the next 3 days gives a
-  // clean daily forecast without needing the paid "One Call" endpoint.
   const dailyEntries = data.list
     .filter((entry) => entry.dt_txt.includes("12:00:00"))
     .slice(0, 3);
@@ -79,8 +67,6 @@ async function initWeather() {
   }
 }
 
-// ---------- Member Spotlights ----------
-
 async function getMembers() {
   try {
     const response = await fetch("data/members.json");
@@ -96,7 +82,7 @@ async function getMembers() {
 }
 
 function pickSpotlights(members, count) {
-  const eligible = members.filter((member) => member.membership >= 2); // silver or gold only
+  const eligible = members.filter((member) => member.membership >= 2);
   const shuffled = [...eligible].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count);
 }
@@ -109,7 +95,7 @@ function renderSpotlights(members) {
     const card = document.createElement("article");
     card.className = "member-card";
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="300" height="300">
+      <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="300" height="300">
       <div class="card-body">
         <span class="badge level-${member.membership}">${membershipLabels[member.membership]}</span>
         <h3>${member.name}</h3>
@@ -124,7 +110,7 @@ function renderSpotlights(members) {
 
 async function initSpotlights() {
   const members = await getMembers();
-  const count = Math.random() < 0.5 ? 2 : 3; // randomize count too, not just which members
+  const count = Math.random() < 0.5 ? 2 : 3;
   renderSpotlights(pickSpotlights(members, count));
 }
 

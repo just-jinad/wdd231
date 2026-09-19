@@ -227,7 +227,10 @@ main {
 }
 
 .member-list.list-view .member-card img {
-  display: none;
+  width: 8rem;
+  height: 8rem;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
 }
 
 /* ---------- Footer ---------- */
@@ -256,4 +259,133 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
+}
+
+/* ---------- Hero (index.html) ---------- */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.hero-content {
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-content p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius);
+}
+
+/* ---------- Info grid: events + weather ---------- */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin: var(--space-2xl) 0;
+}
+
+.events,
+.weather-section {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.events h2,
+.weather-section h2,
+.spotlights h2 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+}
+
+.event-item {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.event-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.event-date {
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+.current-weather {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.current-weather .temp {
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.current-weather #current-desc {
+  text-transform: capitalize;
+  color: var(--color-text-muted);
+}
+
+.forecast-list {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.forecast-list li {
+  flex: 1;
+  text-align: center;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.forecast-day {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.forecast-temp {
+  font-weight: 600;
+}
+
+/* ---------- Spotlights ---------- */
+.spotlights {
+  margin-bottom: var(--space-2xl);
 }
