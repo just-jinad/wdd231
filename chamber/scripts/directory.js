@@ -1,4 +1,3 @@
-// directory.js — Ogbomoso Chamber of Commerce directory page
 
 const memberListEl = document.querySelector("#member-list");
 const gridBtn = document.querySelector("#grid-view-btn");
