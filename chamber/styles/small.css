@@ -276,6 +276,11 @@ main {
   text-align: center;
 }
 
+.hero-content h1,
+.hero-content p {
+  color: var(--color-text);
+}
+
 .hero-content h1 {
   font-size: 1.5rem;
   margin-bottom: var(--space-sm);
