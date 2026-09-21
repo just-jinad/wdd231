@@ -82,7 +82,7 @@ async function getMembers() {
 }
 
 function pickSpotlights(members, count) {
-  const eligible = members.filter((member) => member.membership >= 2);
+  const eligible = members.filter((member) => member.membership_level >= 2);
   const shuffled = [...eligible].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count);
 }
@@ -95,13 +95,13 @@ function renderSpotlights(members) {
     const card = document.createElement("article");
     card.className = "member-card";
     card.innerHTML = `
-      <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="300" height="300">
+      <img src="${member.image_file_name}" alt="${member.name} logo" loading="lazy" width="300" height="300">
       <div class="card-body">
-        <span class="badge level-${member.membership}">${membershipLabels[member.membership]}</span>
+        <span class="badge level-${member.membership_level}">${membershipLabels[member.membership_level]}</span>
         <h3>${member.name}</h3>
         <p><strong>Phone:</strong> ${member.phone}</p>
         <p><strong>Address:</strong> ${member.address}</p>
-        <p><a href="${member.url}" target="_blank" rel="noopener">${member.url.replace("https://", "")}</a></p>
+        <p><a href="${member.website_url}" target="_blank" rel="noopener">${member.website_url.replace("https://", "")}</a></p>
       </div>
     `;
     container.appendChild(card);

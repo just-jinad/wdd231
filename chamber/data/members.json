@@ -5,9 +5,9 @@
       "tagline": "Traditional Yoruba adire, made and sold locally",
       "address": "12 Takie Road, Ogbomoso, Oyo State",
       "phone": "+234 803 555 0101",
-      "url": "https://adireheritage.example.com",
-      "image": "./images/takie_wares.jpg",
-      "membership": 3,
+      "website_url": "https://adireheritage.example.com",
+      "image_file_name": "./images/takie_wares.jpg",
+      "membership_level": 3,
       "category": "Retail & Fashion"
     },
     {
@@ -15,9 +15,9 @@
       "tagline": "Farm inputs and equipment for local growers",
       "address": "5 Ilorin Road, Ogbomoso, Oyo State",
       "phone": "+234 806 555 0102",
-      "url": "https://lautechagro.example.com",
-      "image": "./images/agro_supplies.jpg",
-      "membership": 3,
+      "website_url": "https://lautechagro.example.com",
+      "image_file_name": "./images/agro_supplies.jpg",
+      "membership_level": 3,
       "category": "Agriculture"
     },
     {
@@ -25,9 +25,9 @@
       "tagline": "Fresh bread and pastries, baked daily",
       "address": "21 Aleshinloye Street, Ogbomoso, Oyo State",
       "phone": "+234 807 555 0103",
-      "url": "https://ogbomosobakes.example.com",
-      "image": "./images/pastries.jpg",
-      "membership": 2,
+      "website_url": "https://ogbomosobakes.example.com",
+      "image_file_name": "./images/pastries.jpg",
+      "membership_level": 2,
       "category": "Food & Beverage"
     },
     {
@@ -35,9 +35,9 @@
       "tagline": "Vehicle repair, servicing, and genuine parts",
       "address": "9 Old Ipetu Road, Ogbomoso, Oyo State",
       "phone": "+234 802 555 0104",
-      "url": "https://tayemotors.example.com",
-      "image": "./images/motors_parts.jpg",
-      "membership": 2,
+      "website_url": "https://tayemotors.example.com",
+      "image_file_name": "./images/motors_parts.jpg",
+      "membership_level": 2,
       "category": "Automotive"
     },
     {
@@ -45,9 +45,9 @@
       "tagline": "Wholesale fabric supply across Oyo State",
       "address": "33 Isale Afon Road, Ogbomoso, Oyo State",
       "phone": "+234 809 555 0105",
-      "url": "https://sunrisetextiles.example.com",
-      "image": "./images/textiles.jpg",
-      "membership": 1,
+      "website_url": "https://sunrisetextiles.example.com",
+      "image_file_name": "./images/textiles.jpg",
+      "membership_level": 1,
       "category": "Wholesale"
     },
     {
@@ -55,9 +55,9 @@
       "tagline": "Livestock feed and veterinary supplies",
       "address": "18 Arowomole Street, Ogbomoso, Oyo State",
       "phone": "+234 810 555 0106",
-      "url": "https://ranchershub.example.com",
-      "image": "./images/farm_ranch.jpg",
-      "membership": 1,
+      "website_url": "https://ranchershub.example.com",
+      "image_file_name": "./images/farm_ranch.jpg",
+      "membership_level": 1,
       "category": "Agriculture"
     },
     {
@@ -65,9 +65,9 @@
       "tagline": "IT support and web services for local businesses",
       "address": "44 Sabo Road, Ogbomoso, Oyo State",
       "phone": "+234 813 555 0107",
-      "url": "https://kaystonetech.example.com",
-      "image": "./images/tech_hub.jpg",
-      "membership": 3,
+      "website_url": "https://kaystonetech.example.com",
+      "image_file_name": "./images/tech_hub.jpg",
+      "membership_level": 3,
       "category": "Technology"
     },
 
@@ -76,9 +76,9 @@
       "tagline": "Locally sourced grains, spices, and packaged foods",
       "address": "16 Isale Ora Road, Ogbomoso, Oyo State",
       "phone": "+234 814 555 0108",
-      "url": "https://oyoharvest.example.com",
-      "image": "./images/farmland.jpg",
-      "membership": 2,
+      "website_url": "https://oyoharvest.example.com",
+      "image_file_name": "./images/farmland.jpg",
+      "membership_level": 2,
       "category": "Food & Beverage"
     },
     {
@@ -86,9 +86,9 @@
       "tagline": "Handwoven aso-oke fabrics and traditional accessories",
       "address": "27 Sabo Road, Ogbomoso, Oyo State",
       "phone": "+234 805 555 0109",
-      "url": "https://aso-oke-craft.example.com",
-      "image": "./images/aso_oke.jpg",
-      "membership": 3,
+      "website_url": "https://aso-oke-craft.example.com",
+      "image_file_name": "./images/aso_oke.jpg",
+      "membership_level": 3,
       "category": "Retail & Fashion"
     },
     {
@@ -96,9 +96,9 @@
       "tagline": "Crop production support and modern farming solutions",
       "address": "8 Igbeti Road, Ogbomoso, Oyo State",
       "phone": "+234 811 555 0110",
-      "url": "https://greenfieldsfarm.example.com",
-      "image": "./images/greenfield.jpg",
-      "membership": 2,
+      "website_url": "https://greenfieldsfarm.example.com",
+      "image_file_name": "./images/greenfield.jpg",
+      "membership_level": 2,
       "category": "Agriculture"
     }
     

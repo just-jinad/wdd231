@@ -227,10 +227,7 @@ main {
 }
 
 .member-list.list-view .member-card img {
-  width: 8rem;
-  height: 8rem;
-  aspect-ratio: 1 / 1;
-  flex-shrink: 0;
+  display: none;
 }
 
 /* ---------- Footer ---------- */

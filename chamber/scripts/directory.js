@@ -33,14 +33,14 @@ function renderMembers(members) {
     const card = document.createElement("article");
     card.className = "member-card";
     card.innerHTML = `
-      <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="300" height="300">
+      <img src="${member.image_file_name}" alt="${member.name} logo" loading="lazy" width="300" height="300">
       <div class="card-body">
-        <span class="badge level-${member.membership}">${membershipLabels[member.membership]}</span>
+        <span class="badge level-${member.membership_level}">${membershipLabels[member.membership_level]}</span>
         <h3>${member.name}</h3>
         <p class="tagline">${member.tagline}</p>
         <p><strong>Address:</strong> ${member.address}</p>
         <p><strong>Phone:</strong> ${member.phone}</p>
-        <p><a href="${member.url}" target="_blank" rel="noopener">${member.url.replace("https://", "")}</a></p>
+        <p><a href="${member.website_url}" target="_blank" rel="noopener">${member.website_url.replace("https://", "")}</a></p>
       </div>
     `;
     memberListEl.appendChild(card);
