@@ -56,8 +56,123 @@
         <a href="index.html">Home</a>
         <a href="directory.html">Directory</a>
         <a href="join.html" aria-current="page">Join</a>
-        <a href="#" >Discovery</a>
+        <a href="#">Discovery</a>
       </nav>
-    
-</body>
+
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">&#9680;</button>
+      </div>
+    </header>
+
+    <main>
+      <header class="page-heading">
+        <p class="eyebrow">Membership</p>
+        <h1>Join the Ogbomoso Chamber</h1>
+        <p>Connect with local businesses and choose the membership that fits your goals.</p>
+      </header>
+
+      <div class="join-layout">
+        <form class="membership-form" action="thankyou.html" method="get">
+          <h2>Membership application</h2>
+          <p class="form-note">Fields marked <span aria-hidden="true">*</span> are required.</p>
+
+          <label for="first-name">First name <span aria-hidden="true">*</span>
+            <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+          </label>
+
+          <label for="last-name">Last name <span aria-hidden="true">*</span>
+            <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+          </label>
+
+          <label for="organization-title">Organizational title
+            <input type="text" id="organization-title" name="organization-title" title="Enter your title within the organization" autocomplete="organization-title" pattern="[A-Za-z -]{7,}" placeholder="e.g., Director">
+          </label>
+
+          <label for="email">Email address <span aria-hidden="true">*</span>
+            <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="name@example.com" required>
+          </label>
+
+          <label for="phone">Mobile phone number <span aria-hidden="true">*</span>
+            <input type="tel" id="phone" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+          </label>
+
+          <label for="organization">Business or organization name <span aria-hidden="true">*</span>
+            <input type="text" id="organization" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+          </label>
+
+          <fieldset>
+            <legend>Membership level</legend>
+            <label><input type="radio" name="membership" value="np" required> NP Membership (no fee)</label>
+            <label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+            <label><input type="radio" name="membership" value="silver"> Silver Membership</label>
+            <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
+          </fieldset>
+
+          <label for="description">Business or organization description
+            <textarea id="description" name="description" title="Describe your business or organization" rows="5"></textarea>
+          </label>
+
+          <input type="hidden" id="timestamp" name="timestamp">
+          <input class="submit-button" type="submit" value="Submit membership application">
+        </form>
+
+        <section class="membership-levels" aria-labelledby="levels-heading">
+          <h2 id="levels-heading">Membership levels</h2>
+          <article class="level-card level-np">
+            <h3>NP Membership</h3>
+            <p>For community-focused nonprofit organizations.</p>
+            <a href="#np-modal">View benefits</a>
+          </article>
+          <article class="level-card level-bronze">
+            <h3>Bronze Membership</h3>
+            <p>A practical start for growing local businesses.</p>
+            <a href="#bronze-modal">View benefits</a>
+          </article>
+          <article class="level-card level-silver">
+            <h3>Silver Membership</h3>
+            <p>More visibility, training, and event advantages.</p>
+            <a href="#silver-modal">View benefits</a>
+          </article>
+          <article class="level-card level-gold">
+            <h3>Gold Membership</h3>
+            <p>Premium promotion and priority chamber access.</p>
+            <a href="#gold-modal">View benefits</a>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <dialog id="np-modal" class="membership-modal" aria-labelledby="np-modal-title">
+      <button class="modal-close" type="button" aria-label="Close NP Membership benefits">&times;</button>
+      <h2 id="np-modal-title">NP Membership benefits</h2>
+      <p>No membership fee for qualifying nonprofit organizations.</p>
+      <ul><li>Chamber networking opportunities</li><li>Community event invitations</li><li>Nonprofit training resources</li></ul>
+    </dialog>
+    <dialog id="bronze-modal" class="membership-modal" aria-labelledby="bronze-modal-title">
+      <button class="modal-close" type="button" aria-label="Close Bronze Membership benefits">&times;</button>
+      <h2 id="bronze-modal-title">Bronze Membership benefits</h2>
+      <p>Affordable support for businesses building their local presence.</p>
+      <ul><li>Networking opportunities</li><li>Member event discounts</li><li>Business training invitations</li></ul>
+    </dialog>
+    <dialog id="silver-modal" class="membership-modal" aria-labelledby="silver-modal-title">
+      <button class="modal-close" type="button" aria-label="Close Silver Membership benefits">&times;</button>
+      <h2 id="silver-modal-title">Silver Membership benefits</h2>
+      <p>Expanded tools to help established businesses grow.</p>
+      <ul><li>All Bronze benefits</li><li>Priority event registration</li><li>Quarterly business spotlight</li></ul>
+    </dialog>
+    <dialog id="gold-modal" class="membership-modal" aria-labelledby="gold-modal-title">
+      <button class="modal-close" type="button" aria-label="Close Gold Membership benefits">&times;</button>
+      <h2 id="gold-modal-title">Gold Membership benefits</h2>
+      <p>Maximum visibility and access for chamber leaders.</p>
+      <ul><li>All Silver benefits</li><li>Homepage spotlight advertising</li><li>VIP access to chamber events</li></ul>
+    </dialog>
+
+    <footer class="site-footer">
+      <div><p><strong>Ogbomoso Chamber of Commerce</strong></p><p>Takie Road, Ogbomoso, Oyo State, Nigeria</p><p>info@ogbomosocc.org</p></div>
+      <div class="socials"><a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">YT</a><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">X</a><a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></div>
+      <div><p>WDD 231 Class Project</p><p>Tope Jinad</p><p>&copy; <span id="current-year"></span> Ogbomoso Chamber of Commerce</p><p>Last Modification: <span id="last-modified"></span></p></div>
+    </footer>
+    <script src="./scripts/common.js"></script>
+    <script src="./scripts/join.js"></script>
+  </body>
 </html>

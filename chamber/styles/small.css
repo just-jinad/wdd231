@@ -4,6 +4,8 @@
   /* Light mode (default) */
   --color-primary: #C2410C;
   --color-secondary: #1E3A8A;
+  --color-gold: #CA8A04;
+  --color-gold-hover: #A16207;
   --color-bg: #FAFAF9;
   --color-bg-card: #FFFFFF;
   --color-text: #1C1917;
@@ -26,6 +28,8 @@
 [data-theme="dark"] {
   --color-primary: #FB923C;
   --color-secondary: #93C5FD;
+  --color-gold: #FACC15;
+  --color-gold-hover: #EAB308;
   --color-bg: #18181B;
   --color-bg-card: #27272A;
   --color-text: #F4F4F5;
@@ -214,7 +218,7 @@ main {
 
 .badge.level-1 { background-color: var(--color-border); color: var(--color-text); }
 .badge.level-2 { background-color: #D6D3D1; color: #1C1917; }
-.badge.level-3 { background-color: var(--color-primary); color: #FFFFFF; }
+.badge.level-3 { background-color: var(--color-gold); color: #1C1917; }
 
 /* List view */
 .member-list.list-view {
@@ -256,6 +260,247 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
+}
+
+/* ---------- Join and confirmation pages ---------- */
+.page-heading {
+  margin-bottom: var(--space-lg);
+}
+
+.page-heading h1,
+.thank-you h1 {
+  margin-bottom: var(--space-sm);
+}
+
+.page-heading p:last-child,
+.thank-you > p:not(.eyebrow) {
+  color: var(--color-text-muted);
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+}
+
+.join-layout {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.membership-form,
+.membership-levels,
+.thank-you {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+}
+
+.membership-form h2,
+.membership-levels h2 {
+  margin-top: 0;
+}
+
+.form-note {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.membership-form > label,
+.membership-form fieldset {
+  display: block;
+  margin-top: var(--space-md);
+}
+
+.membership-form label {
+  font-weight: 600;
+}
+
+.membership-form label span,
+.membership-form legend::after {
+  color: var(--color-primary);
+}
+
+.membership-form input:not([type="radio"]),
+.membership-form textarea {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  display: block;
+  font: inherit;
+  margin-top: var(--space-xs);
+  padding: var(--space-sm);
+  width: 100%;
+}
+
+.membership-form input:focus,
+.membership-form textarea:focus {
+  border-color: var(--color-secondary);
+  outline: 3px solid color-mix(in srgb, var(--color-secondary) 25%, transparent);
+}
+
+.membership-form fieldset {
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+}
+
+.membership-form legend {
+  font-weight: 700;
+  padding: 0 var(--space-xs);
+}
+
+.membership-form fieldset label {
+  display: block;
+  margin-top: var(--space-sm);
+}
+
+.membership-form fieldset label:first-of-type {
+  margin-top: 0;
+}
+
+.submit-button {
+  background-color: var(--color-primary);
+  border: 0;
+  border-radius: var(--radius);
+  color: #FFFFFF;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  width: 100%;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.membership-form input.submit-button {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.membership-form input.submit-button:hover,
+.membership-form input.submit-button:focus-visible,
+.cta-button:hover,
+.cta-button:focus-visible {
+  background-color: var(--color-secondary);
+  filter: none;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.membership-levels {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.membership-levels h2 {
+  grid-column: 1 / -1;
+}
+
+.level-card {
+  animation: level-intro 0.7s ease both;
+  background-color: var(--color-bg);
+  border-left: 0.35rem solid var(--color-secondary);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.level-card:nth-of-type(2) { animation-delay: 0.12s; border-left-color: #A16207; }
+.level-card:nth-of-type(3) { animation-delay: 0.24s; border-left-color: #64748B; }
+.level-card:nth-of-type(4) { animation-delay: 0.36s; border-left-color: var(--color-gold); }
+
+.level-card h3 {
+  margin-top: 0;
+}
+
+.level-card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.level-card a {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.level-gold h3,
+.level-gold a {
+  color: var(--color-gold-hover);
+}
+
+.level-gold {
+  border-left-color: var(--color-gold);
+}
+
+@keyframes level-intro {
+  from { opacity: 0; transform: translateY(1rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.membership-modal {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  max-width: 32rem;
+  padding: var(--space-xl);
+  width: calc(100% - var(--space-lg));
+}
+
+.membership-modal::backdrop {
+  background-color: rgb(28 25 23 / 65%);
+}
+
+.membership-modal h2 {
+  padding-right: var(--space-lg);
+}
+
+.modal-close {
+  background: transparent;
+  border: 0;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 1.75rem;
+  line-height: 1;
+  padding: 0;
+  position: absolute;
+  right: var(--space-md);
+  top: var(--space-md);
+}
+
+.submission-details {
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-lg) 0;
+}
+
+.submission-details div {
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-md);
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+}
+
+.submission-details dt { font-weight: 700; }
+.submission-details dd { margin: 0; text-align: right; }
+
+.cta-button {
+  background-color: var(--color-primary);
+  border-radius: var(--radius);
+  color: #FFFFFF;
+  display: inline-block;
+  font-weight: 700;
+  padding: var(--space-sm) var(--space-lg);
 }
 
 /* ---------- Hero (index.html) ---------- */

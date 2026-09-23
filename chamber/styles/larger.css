@@ -29,6 +29,24 @@
   main {
     padding: var(--space-xl);
   }
+
+  .join-layout {
+    align-items: start;
+    grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  }
+
+  .membership-levels {
+    position: sticky;
+    top: var(--space-md);
+  }
+
+  .submission-details div {
+    justify-content: flex-start;
+  }
+
+  .submission-details dt {
+    min-width: 14rem;
+  }
 }
 
 @media screen and (min-width: 64em) {

@@ -4,8 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | Ogbomoso Chamber of Commerce</title>
+     <meta
+      name="description"
+      content="Browse member businesses of the Ogbomoso Chamber of Commerce."
+    >
+    <meta name="author" content="Tope Jinad">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <meta property="og:title" content="Ogbomoso Chamber of Commerce">
+    <meta
+      property="og:description"
+      content="Promoting local businesses, fostering economic growth, and building a stronger Ogbomoso business community."
+    >
+    <meta
+      property="og:image"
+      content="https://just-jinad.github.io/wdd231/chamber/favicon/favicon-32x32.png"
+    >
+    <meta
+      property="og:url"
+      content="https://just-jinad.github.io/wdd231/chamber/directory.html"
+    >
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
 </head>
 <body>
-    
+  <header class="site-header">
+    <div class="branding"><img src="./favicon/favicon-32x32.png" alt="" width="36" height="36"><span>Ogbomoso Chamber of Commerce</span></div>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">&#9776;</button>
+    <nav id="primary-nav" class="primary-nav"><a href="index.html">Home</a><a href="directory.html">Directory</a><a href="join.html">Join</a><a href="#">Discovery</a></nav>
+    <div class="header-controls"><button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">&#9680;</button></div>
+  </header>
+
+  <main>
+    <section class="thank-you" aria-labelledby="thank-you-heading">
+      <p class="eyebrow">Application received</p>
+      <h1 id="thank-you-heading">Thank you for joining us</h1>
+      <p>We appreciate your interest in the Ogbomoso Chamber of Commerce. We received the following information:</p>
+      <dl class="submission-details">
+        <div><dt>First name</dt><dd id="submitted-first-name"></dd></div>
+        <div><dt>Last name</dt><dd id="submitted-last-name"></dd></div>
+        <div><dt>Email address</dt><dd id="submitted-email"></dd></div>
+        <div><dt>Mobile phone</dt><dd id="submitted-phone"></dd></div>
+        <div><dt>Business or organization</dt><dd id="submitted-organization"></dd></div>
+        <div><dt>Application timestamp</dt><dd id="submitted-timestamp"></dd></div>
+      </dl>
+      <a class="cta-button" href="index.html">Return to home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><p><strong>Ogbomoso Chamber of Commerce</strong></p><p>Takie Road, Ogbomoso, Oyo State, Nigeria</p><p>info@ogbomosocc.org</p></div>
+    <div class="socials"><a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">YT</a><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">X</a><a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></div>
+    <div><p>WDD 231 Class Project</p><p>Tope Jinad</p><p>&copy; <span id="current-year"></span> Ogbomoso Chamber of Commerce</p><p>Last Modification: <span id="last-modified"></span></p></div>
+  </footer>
+  <script src="./scripts/common.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const submittedFields = {
+      'submitted-first-name': 'first-name',
+      'submitted-last-name': 'last-name',
+      'submitted-email': 'email',
+      'submitted-phone': 'phone',
+      'submitted-organization': 'organization',
+      'submitted-timestamp': 'timestamp'
+    };
+
+    Object.entries(submittedFields).forEach(([elementId, fieldName]) => {
+      const element = document.getElementById(elementId);
+      const value = params.get(fieldName) || 'Not provided';
+      element.textContent = fieldName === 'timestamp' && value !== 'Not provided'
+        ? new Date(value).toLocaleString()
+        : value;
+    });
+  </script>
 </body>
 </html>
