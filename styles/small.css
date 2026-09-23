@@ -205,6 +205,7 @@ section h2 {
   padding: var(--space-xs) var(--space-sm);
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
 }
 
 .course-card.completed {
@@ -259,4 +260,70 @@ section h2 {
 #lastModified {
   margin: 0.25rem 0;
   font-size: 0.85rem;
+}
+
+/* ---------- Course details modal ---------- */
+dialog {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  box-shadow: 0 0 3rem rgb(0 0 0 / 35%);
+  width: 90%;
+  max-width: 600px;
+}
+
+dialog::backdrop {
+  background-color: rgb(27 38 59 / 70%);
+}
+
+dialog button {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-bg);
+  color: var(--color-header);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+dialog button:hover,
+dialog button:focus-visible {
+  background-color: var(--color-accent);
+}
+
+dialog h2 {
+  margin: calc(var(--space-md) * -1) calc(var(--space-md) * -1) var(--space-md);
+  padding: var(--space-sm);
+  background-color: var(--color-header);
+  color: var(--color-header-text);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.course-modal-details {
+  margin: 0;
+}
+
+.course-modal-details div {
+  margin-bottom: var(--space-sm);
+}
+
+.course-modal-details div:last-child {
+  margin-bottom: 0;
+}
+
+.course-modal-details dt {
+  font-weight: 800;
+  color: var(--color-header);
+}
+
+.course-modal-details dd {
+  margin: 0.15rem 0 0;
 }

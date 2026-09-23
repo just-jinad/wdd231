@@ -46,6 +46,18 @@ const courses = [
 const cardContainer = document.getElementById('course-cards');
 const creditTotalEl = document.getElementById('credit-total');
 const filterButtons = document.querySelectorAll('.filter-btn');
+const courseDialog = document.getElementById('course-details');
+const closeButton = document.getElementById('closeButton');
+
+function displayCourseDetails(course) {
+  document.getElementById('course-modal-title').textContent = `${course.subject} ${course.number}`;
+  document.getElementById('modal-title').textContent = course.title;
+  document.getElementById('modal-credits').textContent = `${course.credits} credits`;
+  document.getElementById('modal-description').textContent = course.description;
+  document.getElementById('modal-certificate').textContent = course.certificate;
+  document.getElementById('modal-technology').textContent = course.technology.join(', ');
+  courseDialog.showModal();
+}
 
 function renderCourses(list) {
   cardContainer.innerHTML = '';
@@ -53,13 +65,22 @@ function renderCourses(list) {
     const card = document.createElement('div');
     card.className = course.completed ? 'course-card completed' : 'course-card';
     card.textContent = `${course.subject} ${course.number}`;
-    card.title = course.title; // cheap tooltip, no extra markup needed
+    card.title = course.title; 
+    card.addEventListener('click', () => displayCourseDetails(course));
     cardContainer.appendChild(card);
   });
 
   const totalCredits = list.reduce((sum, course) => sum + course.credits, 0);
   creditTotalEl.textContent = totalCredits;
 }
+
+closeButton.addEventListener('click', () => courseDialog.close());
+
+courseDialog.addEventListener('click', event => {
+  if (event.target === courseDialog) {
+    courseDialog.close();
+  }
+});
 
 function applyFilter(filterValue) {
   const filtered = filterValue === 'all'
