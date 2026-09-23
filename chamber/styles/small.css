@@ -521,7 +521,6 @@ main {
   text-align: center;
 }
 
-.hero-content h1,
 .hero-content p {
   color: var(--color-text);
 }
@@ -536,16 +535,6 @@ main {
   margin-bottom: var(--space-md);
 }
 
-.cta-button {
-  display: inline-block;
-  background-color: var(--color-primary);
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: var(--space-sm) var(--space-lg);
-  border-radius: var(--radius);
-}
-
-/* ---------- Info grid: events + weather ---------- */
 .info-grid {
   display: grid;
   grid-template-columns: 1fr;
