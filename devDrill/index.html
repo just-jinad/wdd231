@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevDrill — Site Plan</title>
+  <meta name="description" content="Site plan for DevDrill, a CS study-quiz web app: site name, purpose, scenarios, color scheme, typography, and wireframe.">
+  <meta name="author" content="Temi (Tope Jinad)">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>DevDrill <span class="tagline">— Site Plan</span></h1>
+  </header>
+
+  <main>
+
+    <section id="site-name" aria-labelledby="site-name-heading">
+      <h2 id="site-name-heading">Site Name</h2>
+      <p class="site-name-value">DevDrill</p>
+      <p>
+        The name pairs "dev" (the target audience — developers and CS students) with "drill,"
+        which signals repeated, focused practice rather than a one-off reference tool. It's short
+        enough to work as a nav logo and doesn't tie the brand to any single institution, so it
+        can be reused beyond this course.
+      </p>
+      <p class="domain-note">Optional domain reference: <code>devdrill.app</code></p>
+    </section>
+
+    <section id="site-purpose" aria-labelledby="site-purpose-heading">
+      <h2 id="site-purpose-heading">Site Purpose</h2>
+      <p>
+        DevDrill gives computer science students a focused way to self-test on core CS topics —
+        data structures, algorithms, OOP concepts, and programming fundamentals — through short,
+        timed multiple-choice quizzes. Questions are pulled from a public trivia API with a
+        locally authored fallback bank, and each student's quiz history and missed questions are
+        tracked locally so they can revisit weak areas instead of re-studying everything blindly.
+      </p>
+    </section>
+
+    <section id="scenarios" aria-labelledby="scenarios-heading">
+      <h2 id="scenarios-heading">Scenarios</h2>
+      <ul>
+        <li>What CS topics can I quickly practice before a quiz or interview?</li>
+        <li>Which questions did I get wrong last time, so I know what to review?</li>
+        <li>Can I track whether I'm actually improving over multiple sessions?</li>
+      </ul>
+    </section>
+
+    <section id="color-scheme" aria-labelledby="color-scheme-heading">
+      <h2 id="color-scheme-heading">Color Scheme</h2>
+      <p>Four colors, used consistently across every page:</p>
+      <ul class="swatch-list">
+        <li class="swatch" style="background-color:#1B6E5B;">
+          <span class="swatch-label">#1B6E5B — Primary Dark</span>
+          <span class="swatch-usage">Header/nav background, footer background</span>
+        </li>
+        <li class="swatch" style="background-color:#2EA87D;">
+          <span class="swatch-label">#2EA87D — Primary</span>
+          <span class="swatch-usage">Links, buttons, active nav state, progress bar fill</span>
+        </li>
+        <li class="swatch swatch-dark-text" style="background-color:#7BD2A0;">
+          <span class="swatch-label">#7BD2A0 — Accent</span>
+          <span class="swatch-usage">Badges, hover states, correct-answer highlight</span>
+        </li>
+        <li class="swatch swatch-dark-text" style="background-color:#F2F2F0;">
+          <span class="swatch-label">#F2F2F0 — Background</span>
+          <span class="swatch-usage">Page background, card surfaces sit on this</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="typography" aria-labelledby="typography-heading">
+      <h2 id="typography-heading">Typography</h2>
+      <p>Two typefaces, each with a clear job:</p>
+      <div class="type-sample">
+        <h3 class="font-heading-sample">Fredoka — Headings</h3>
+        <p class="font-sample-note">
+          Used for all h1–h3 elements, nav links, and badges. Rounded and friendly, matches the
+          gamified direction without undermining legibility.
+        </p>
+      </div>
+      <div class="type-sample">
+        <p class="font-body-sample">
+          System font stack (San Francisco / Segoe UI / Roboto) — Body text, paragraphs, form
+          labels, quiz questions. Zero network cost and contrasts cleanly against the heading font.
+        </p>
+      </div>
+    </section>
+
+    <section id="wireframe" aria-labelledby="wireframe-heading">
+      <h2 id="wireframe-heading">Wireframe — Home Page</h2>
+      <p>
+        Hand-drawn sketches of the home page layout at small and large viewports. These are
+        structure-only — no color, no final copy — and must be your own sketch per course rules
+        (no AI-generated wireframes).
+      </p>
+      <div class="wireframe-grid">
+        <figure>
+          <img src="images/mobile_view.jpeg"
+               alt="Hand-drawn wireframe of the DevDrill home page at mobile viewport width — replace this placeholder with your own scanned sketch">
+          <figcaption>Small viewport (320px)</figcaption>
+        </figure>
+        <figure>
+          <img src="images/desktop_view.jpeg"
+               alt="Hand-drawn wireframe of the DevDrill home page at desktop viewport width — replace this placeholder with your own scanned sketch">
+          <figcaption>Large viewport (desktop/tablet)</figcaption>
+        </figure>
+      </div>
+      <p class="wireframe-note">
+        Sketch target: hamburger nav collapsing to horizontal links at desktop width, a hero with
+        headline + CTA, a 3-step "how it works" block, and a footer with the required video-demo
+        and attributions links. Stack sections vertically on mobile; the "how it works" steps can
+        move to a 3-column row at desktop width.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 DevDrill — WDD231 Site Plan</p>
+  </footer>
+
+</body>
+</html>

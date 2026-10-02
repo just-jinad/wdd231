@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap');
+
+:root {
+  /* Color scheme */
+  --color-primary-dark: #1B6E5B;
+  --color-primary: #2EA87D;
+  --color-accent: #7BD2A0;
+  --color-bg: #F2F2F0;
+  --color-surface: #FFFFFF;
+  --color-text: #1A1A2E;
+  --color-text-on-dark: #F2F2F0;
+
+  /* Typography */
+  --font-heading: 'Fredoka', sans-serif;
+  --font-body: -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing (8px base) */
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.site-header {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-on-dark);
+  padding: var(--space-4) var(--space-5);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.site-header .tagline {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4);
+}
+
+section {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+h2 {
+  color: var(--color-primary-dark);
+  margin-top: 0;
+}
+
+.site-name-value {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-3);
+}
+
+.domain-note code {
+  background-color: var(--color-bg);
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+}
+
+ul {
+  padding-left: var(--space-4);
+}
+
+/* Color scheme swatches */
+.swatch-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-3);
+  border-radius: var(--radius);
+  color: var(--color-text-on-dark);
+}
+
+.swatch-dark-text {
+  color: var(--color-text);
+}
+
+.swatch-label {
+  font-weight: 600;
+}
+
+.swatch-usage {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Typography samples */
+.type-sample {
+  margin-bottom: var(--space-3);
+}
+
+.font-heading-sample {
+  color: var(--color-primary);
+}
+
+.font-sample-note,
+.font-body-sample {
+  color: var(--color-text);
+}
+
+/* Wireframe section */
+.wireframe-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .wireframe-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.wireframe-grid img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  background-color: var(--color-bg);
+}
+
+figcaption {
+  text-align: center;
+  margin-top: var(--space-2);
+  font-size: 0.9rem;
+}
+
+.wireframe-note {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.site-footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-on-dark);
+  text-align: center;
+  padding: var(--space-3);
+}
