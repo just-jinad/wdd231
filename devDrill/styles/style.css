@@ -80,7 +80,7 @@ h2 {
 .site-name-value {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   margin: 0 0 var(--space-3);
 }
 
@@ -130,7 +130,7 @@ ul {
 }
 
 .font-heading-sample {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .font-sample-note,
