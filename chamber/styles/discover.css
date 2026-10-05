@@ -1,0 +1,206 @@
+
+/* ---------- Page heading ---------- */
+.discover-intro {
+  margin-bottom: var(--space-lg);
+}
+
+.discover-intro h1 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-sm);
+}
+
+.discover-intro p {
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
+
+/* ---------- Last-visit message (inline, dismissible) ---------- */
+.visit-message {
+  align-items: center;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-left: 0.35rem solid var(--color-secondary);
+  border-radius: var(--radius);
+  display: flex;
+  gap: var(--space-md);
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+}
+
+/* The hidden attribute loses to display:flex above without this. */
+.visit-message[hidden] {
+  display: none;
+}
+
+.visit-close {
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: var(--space-xs);
+}
+
+/* ---------- Card grid: SMALL (default) — one column, one named area per card ---------- */
+.discover-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
+    "h";
+}
+
+.discover-card:nth-child(1) { grid-area: a; }
+.discover-card:nth-child(2) { grid-area: b; }
+.discover-card:nth-child(3) { grid-area: c; }
+.discover-card:nth-child(4) { grid-area: d; }
+.discover-card:nth-child(5) { grid-area: e; }
+.discover-card:nth-child(6) { grid-area: f; }
+.discover-card:nth-child(7) { grid-area: g; }
+.discover-card:nth-child(8) { grid-area: h; }
+
+/* ---------- Card internals: named areas too ---------- */
+.discover-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-areas:
+    "title"
+    "figure"
+    "address"
+    "desc"
+    "action";
+  grid-template-rows: auto auto auto 1fr auto;
+  padding: var(--space-md);
+}
+
+.discover-card h2     { grid-area: title; font-size: 1.15rem; }
+.discover-card figure { grid-area: figure; }
+.discover-card address {
+  grid-area: address;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-style: normal;
+}
+.discover-card p      { grid-area: desc; font-size: 0.9rem; }
+.card-button          { grid-area: action; }
+
+.discover-card img {
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius);
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-button {
+  background-color: var(--color-primary);
+  border-radius: var(--radius);
+  /* Card background as text colour keeps AA contrast in both light and dark themes. */
+  color: var(--color-bg-card);
+  font-weight: 700;
+  justify-self: start;
+  margin-top: var(--space-xs);
+  padding: var(--space-sm) var(--space-lg);
+  transition: background-color 0.2s ease;
+}
+
+.card-button:hover,
+.card-button:focus-visible {
+  background-color: var(--color-secondary);
+}
+
+.card-button:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* ---------- MEDIUM: 641px - 1024px — two columns, two featured rows ---------- */
+@media screen and (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d d"
+      "e f"
+      "g h";
+  }
+
+  /* Reserve two title lines so images line up across a row even when one title wraps. */
+  .discover-card h2 {
+    min-block-size: 2lh;
+  }
+
+
+  .discover-card:nth-child(1),
+  .discover-card:nth-child(4) {
+    column-gap: var(--space-lg);
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+      "figure title"
+      "figure address"
+      "figure desc"
+      "figure action"
+      "figure .";
+    grid-template-rows: auto auto auto auto 1fr;
+  }
+
+  .discover-card:nth-child(1) h2,
+  .discover-card:nth-child(4) h2 {
+    min-block-size: 0;
+  }
+
+  /* Hover effect: pointer devices on non-mobile widths only. */
+  @media (hover: hover) {
+    .discover-card figure {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .discover-card img {
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .discover-card figure:hover img {
+      filter: saturate(1.3) contrast(1.05);
+      transform: scale(1.08);
+    }
+  }
+}
+
+/* ---------- LARGE: 1025px and up — three columns, one featured card ---------- */
+@media screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "a a b"
+      "c d e"
+      "f g h";
+  }
+
+  /* Reset the medium featured layout for card 4; only card 1 stays featured here. */
+  .discover-card:nth-child(4) {
+    column-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "figure"
+      "address"
+      "desc"
+      "action";
+    grid-template-rows: auto auto auto 1fr auto;
+  }
+
+  .discover-card:nth-child(4) h2 {
+    min-block-size: 2lh;
+  }
+}

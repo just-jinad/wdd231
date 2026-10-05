@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | Ogbomoso Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Discover Ogbomoso: landmarks, parks, institutions and heritage sites in the Oyo State city served by the Ogbomoso Chamber of Commerce."
+    >
+    <meta name="author" content="Tope Jinad">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <meta property="og:title" content="Discover Ogbomoso | Ogbomoso Chamber of Commerce">
+    <meta
+      property="og:description"
+      content="Landmarks, parks, institutions and heritage sites that make Ogbomoso a great place to do business and to visit."
+    >
+    <meta
+      property="og:image"
+      content="https://just-jinad.github.io/wdd231/chamber/favicon/favicon-32x32.png"
+    >
+    <meta
+      property="og:url"
+      content="https://just-jinad.github.io/wdd231/chamber/discover.html"
+    >
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="stylesheet" href="./styles/discover.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="branding">
+        <img src="./favicon/favicon-32x32.png" alt="" width="36" height="36">
+        <span>Ogbomoso Chamber of Commerce</span>
+      </div>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+
+      <nav id="primary-nav" class="primary-nav">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="discover.html" aria-current="page">Discovery</a>
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+          &#9680;
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="discover-intro">
+        <h1>Discover Ogbomoso</h1>
+        <p>
+          Eight places that show what makes Ogbomoso a good city to do business in and to visit:
+          royal heritage, green spaces, learning and health care.
+        </p>
+      </div>
+
+      <aside id="visit-message" class="visit-message" role="status" hidden>
+        <p id="visit-text"></p>
+        <button id="visit-close" class="visit-close" type="button" aria-label="Dismiss visit message">&times;</button>
+      </aside>
+
+      <section id="discover-grid" class="discover-grid" aria-label="Places to discover in Ogbomoso">
+        <!-- Cards injected by scripts/discover.js from data/places.mjs -->
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p><strong>Ogbomoso Chamber of Commerce</strong></p>
+        <p>Takie Road, Ogbomoso, Oyo State, Nigeria</p>
+        <p>info@ogbomosocc.org</p>
+      </div>
+
+      <div class="socials">
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">X</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      </div>
+
+      <div>
+        <p>WDD 231 Class Project</p>
+        <p>Tope Jinad</p>
+        <p>&copy; <span id="current-year"></span> Ogbomoso Chamber of Commerce</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+      </div>
+    </footer>
+
+    <script src="./scripts/common.js"></script>
+    <script type="module" src="./scripts/discover.js"></script>
+  </body>
+</html>
