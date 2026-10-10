@@ -1,6 +1,7 @@
 
 const PREFIX = 'devdrill:';
 const HISTORY_LIMIT = 20;
+const SUBMISSION_LIMIT = 20;
 
 function area(kind) {
   try {
@@ -97,6 +98,15 @@ export function clearProgress() {
       /* nothing to clear if storage is unavailable */
     }
   }
+}
+
+export function addSubmission(submission) {
+  const submissions = [submission, ...getSubmissions()].slice(0, SUBMISSION_LIMIT);
+  return write('localStorage', 'submissions', submissions);
+}
+
+export function getSubmissions() {
+  return read('localStorage', 'submissions', []);
 }
 
 

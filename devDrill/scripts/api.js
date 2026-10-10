@@ -78,7 +78,7 @@ const decode = (s) => {
   try {
     return decodeURIComponent(s);
   } catch {
-    return s; // malformed encoding: show the raw text rather than crash
+    return s; 
   }
 };
 
@@ -102,7 +102,6 @@ export function normalizeLocalItem(item) {
   return { explanation: '', ...item, source: 'local' };
 }
 
-// FNV-1a 32-bit: small, deterministic, plenty for a few hundred questions.
 export function hash(str) {
   let h = 0x811c9dc5;
   for (let i = 0; i < str.length; i++) {
@@ -112,7 +111,6 @@ export function hash(str) {
   return (h >>> 0).toString(36);
 }
 
-// Fisher-Yates on a copy; never mutates the input (the cache stays intact).
 export function shuffle(items) {
   const a = [...items];
   for (let i = a.length - 1; i > 0; i--) {
