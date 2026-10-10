@@ -1,0 +1,898 @@
+[
+  {
+    "id": "alg-001",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "easy",
+    "question": "What is the time complexity of binary search on a sorted array of n elements?",
+    "correct_answer": "O(log n)",
+    "incorrect_answers": [
+      "O(n)",
+      "O(n log n)",
+      "O(1)"
+    ],
+    "explanation": "Each comparison halves the remaining search space."
+  },
+  {
+    "id": "alg-002",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "easy",
+    "question": "What is the worst-case time complexity of bubble sort?",
+    "correct_answer": "O(n^2)",
+    "incorrect_answers": [
+      "O(n)",
+      "O(n log n)",
+      "O(log n)"
+    ],
+    "explanation": "On reversed input, nested passes make n(n-1)/2 adjacent comparisons."
+  },
+  {
+    "id": "alg-003",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "medium",
+    "question": "What is the time complexity of this loop? for (int i = 1; i < n; i *= 2) { ... }",
+    "correct_answer": "O(log n)",
+    "incorrect_answers": [
+      "O(n)",
+      "O(n^2)",
+      "O(sqrt n)"
+    ],
+    "explanation": "i doubles on every pass, so the loop runs about log2(n) times."
+  },
+  {
+    "id": "alg-004",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "medium",
+    "question": "What is the worst-case time complexity of quicksort?",
+    "correct_answer": "O(n^2)",
+    "incorrect_answers": [
+      "O(n log n)",
+      "O(n)",
+      "O(log n)"
+    ],
+    "explanation": "Consistently bad pivots (such as the last element on already sorted input) create lopsided partitions."
+  },
+  {
+    "id": "alg-005",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "easy",
+    "question": "What is the time complexity of merge sort in the best, average, and worst cases?",
+    "correct_answer": "O(n log n) in all cases",
+    "incorrect_answers": [
+      "O(n^2) in the worst case",
+      "O(n) in the best case",
+      "O(log n) in all cases"
+    ],
+    "explanation": "It always splits in half (log n levels) and merges in linear time per level."
+  },
+  {
+    "id": "alg-006",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "medium",
+    "question": "What is the auxiliary space complexity of a standard array-based merge sort?",
+    "correct_answer": "O(n)",
+    "incorrect_answers": [
+      "O(1)",
+      "O(log n)",
+      "O(n^2)"
+    ],
+    "explanation": "The merge step needs a temporary buffer proportional to the input size."
+  },
+  {
+    "id": "alg-007",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "medium",
+    "question": "What is the best-case time complexity of insertion sort?",
+    "correct_answer": "O(n)",
+    "incorrect_answers": [
+      "O(n^2)",
+      "O(n log n)",
+      "O(log n)"
+    ],
+    "explanation": "On already sorted input, each element needs just one comparison."
+  },
+  {
+    "id": "alg-008",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "easy",
+    "question": "Which data structure does an iterative breadth-first search (BFS) use to track the nodes to visit next?",
+    "correct_answer": "Queue",
+    "incorrect_answers": [
+      "Stack",
+      "Min-heap",
+      "Hash set"
+    ],
+    "explanation": "A FIFO queue makes BFS explore the graph level by level."
+  },
+  {
+    "id": "alg-009",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "medium",
+    "question": "For which kind of graph does BFS find the shortest path by total distance?",
+    "correct_answer": "An unweighted graph",
+    "incorrect_answers": [
+      "A graph with differing positive edge weights",
+      "A graph with negative edge weights",
+      "Only trees"
+    ],
+    "explanation": "BFS reaches nodes in order of edge count; with varying weights you need Dijkstra's algorithm."
+  },
+  {
+    "id": "alg-010",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "hard",
+    "question": "Which algorithm finds single-source shortest paths in a graph that may have negative edge weights (but no negative cycles)?",
+    "correct_answer": "Bellman-Ford",
+    "incorrect_answers": [
+      "Dijkstra's algorithm",
+      "Prim's algorithm",
+      "Kruskal's algorithm"
+    ],
+    "explanation": "Dijkstra's assumes non-negative weights; Bellman-Ford relaxes every edge up to V-1 times."
+  },
+  {
+    "id": "alg-011",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "medium",
+    "question": "Which minimum-spanning-tree algorithm sorts all edges by weight and adds the lightest edge that does not create a cycle?",
+    "correct_answer": "Kruskal's algorithm",
+    "incorrect_answers": [
+      "Prim's algorithm",
+      "Dijkstra's algorithm",
+      "Bellman-Ford algorithm"
+    ],
+    "explanation": "Kruskal's typically uses union-find to detect cycles; Prim's grows a single tree from a start vertex."
+  },
+  {
+    "id": "alg-012",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "medium",
+    "question": "Topological sorting is only possible on which kind of graph?",
+    "correct_answer": "A directed acyclic graph (DAG)",
+    "incorrect_answers": [
+      "An undirected graph",
+      "Any graph containing a cycle",
+      "A complete graph"
+    ],
+    "explanation": "A cycle makes it impossible to order nodes so that every edge points forward."
+  },
+  {
+    "id": "alg-013",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "easy",
+    "question": "What does memoization avoid in a recursive algorithm?",
+    "correct_answer": "Recomputing the same subproblems",
+    "incorrect_answers": [
+      "Using a base case",
+      "Allocating memory on the heap",
+      "Using the call stack"
+    ],
+    "explanation": "Results are cached by input, so overlapping subproblems are solved once."
+  },
+  {
+    "id": "alg-014",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "medium",
+    "question": "What is the time complexity of the naive recursive Fibonacci, fib(n) = fib(n-1) + fib(n-2)?",
+    "correct_answer": "O(2^n)",
+    "incorrect_answers": [
+      "O(n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "explanation": "Each call spawns two more with almost no shared work, so the call tree grows exponentially (tight bound is about 1.618^n, bounded above by 2^n)."
+  },
+  {
+    "id": "alg-015",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "hard",
+    "question": "What is the theoretical lower bound for comparison-based sorting in the worst case?",
+    "correct_answer": "Omega(n log n)",
+    "incorrect_answers": [
+      "Omega(n)",
+      "Omega(log n)",
+      "Omega(n^2)"
+    ],
+    "explanation": "A decision tree needs n! leaves, so its height is at least log2(n!), which is Theta(n log n)."
+  },
+  {
+    "id": "alg-016",
+    "track": "algorithms",
+    "category": "Algorithms",
+    "difficulty": "medium",
+    "question": "Using a hash map, what is the average-case time complexity of the classic Two Sum problem (find two numbers that add up to a target)?",
+    "correct_answer": "O(n)",
+    "incorrect_answers": [
+      "O(n^2)",
+      "O(n log n)",
+      "O(log n)"
+    ],
+    "explanation": "One pass: for each number, look up its complement in the map in O(1) average time."
+  },
+  {
+    "id": "dsa-001",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "easy",
+    "question": "Which data structure uses LIFO (Last In, First Out) ordering?",
+    "correct_answer": "Stack",
+    "incorrect_answers": [
+      "Queue",
+      "Linked list",
+      "Hash map"
+    ],
+    "explanation": "The most recently pushed item is the first one popped."
+  },
+  {
+    "id": "dsa-002",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "easy",
+    "question": "Which data structure uses FIFO (First In, First Out) ordering?",
+    "correct_answer": "Queue",
+    "incorrect_answers": [
+      "Stack",
+      "Binary search tree",
+      "Graph"
+    ],
+    "explanation": "Items leave in the same order they entered, like a line at a counter."
+  },
+  {
+    "id": "dsa-003",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "easy",
+    "question": "What is the time complexity of accessing an array element by its index?",
+    "correct_answer": "O(1)",
+    "incorrect_answers": [
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "explanation": "The address is computed directly: base address + index * element size."
+  },
+  {
+    "id": "dsa-004",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "medium",
+    "question": "Which scenario causes hash map lookups to degrade toward O(n)?",
+    "correct_answer": "Many keys colliding into the same bucket",
+    "incorrect_answers": [
+      "The map holding more than 100 entries",
+      "Using string keys instead of integer keys",
+      "Reading the same key twice in a row"
+    ],
+    "explanation": "Colliding keys share a bucket and must be scanned; a good hash function and resizing keep average lookups at O(1)."
+  },
+  {
+    "id": "dsa-005",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "medium",
+    "question": "Which collision-handling technique stores colliding keys in a linked list at the same bucket?",
+    "correct_answer": "Separate chaining",
+    "incorrect_answers": [
+      "Linear probing",
+      "Quadratic probing",
+      "Double hashing"
+    ],
+    "explanation": "The other three are open-addressing strategies that probe for another free slot instead."
+  },
+  {
+    "id": "dsa-006",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "medium",
+    "question": "Which traversal of a binary search tree visits the keys in sorted order?",
+    "correct_answer": "In-order",
+    "incorrect_answers": [
+      "Pre-order",
+      "Post-order",
+      "Level-order"
+    ],
+    "explanation": "In-order visits left subtree, node, then right subtree, which matches the BST ordering."
+  },
+  {
+    "id": "dsa-007",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "medium",
+    "question": "What is the worst-case time complexity of searching an unbalanced binary search tree with n nodes?",
+    "correct_answer": "O(n)",
+    "incorrect_answers": [
+      "O(1)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "explanation": "Inserting already sorted keys produces a chain-shaped tree, so search degrades to a linear scan."
+  },
+  {
+    "id": "dsa-008",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "medium",
+    "question": "Which of these is a self-balancing binary search tree?",
+    "correct_answer": "Red-black tree",
+    "incorrect_answers": [
+      "Binary heap",
+      "Trie",
+      "Hash table"
+    ],
+    "explanation": "Red-black trees rebalance on insert and delete to keep height O(log n)."
+  },
+  {
+    "id": "dsa-009",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "medium",
+    "question": "In a min-heap, where is the smallest element always located?",
+    "correct_answer": "At the root",
+    "incorrect_answers": [
+      "At the last leaf",
+      "In the left child of the root",
+      "Wherever it was inserted"
+    ],
+    "explanation": "The heap property makes every parent <= its children, so the minimum sits at the top."
+  },
+  {
+    "id": "dsa-010",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "easy",
+    "question": "Which data structure is most commonly used to implement a priority queue?",
+    "correct_answer": "Binary heap",
+    "incorrect_answers": [
+      "Stack",
+      "Singly linked list",
+      "Hash table"
+    ],
+    "explanation": "A heap gives O(log n) insert and remove-min."
+  },
+  {
+    "id": "dsa-011",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "easy",
+    "question": "Which data structure is the standard choice for checking whether brackets like ( [ { } ] ) are balanced?",
+    "correct_answer": "Stack",
+    "incorrect_answers": [
+      "Queue",
+      "Hash set",
+      "Binary tree"
+    ],
+    "explanation": "Push openers; each closer must match the most recent opener, which is exactly LIFO."
+  },
+  {
+    "id": "dsa-012",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "medium",
+    "question": "Which data structure is built for fast prefix searches, such as autocomplete?",
+    "correct_answer": "Trie",
+    "incorrect_answers": [
+      "Hash table",
+      "Max-heap",
+      "Doubly linked list"
+    ],
+    "explanation": "Each edge represents a character, so all words sharing a prefix share a path."
+  },
+  {
+    "id": "dsa-013",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "medium",
+    "question": "What is the space complexity of a graph stored as an adjacency list, with V vertices and E edges?",
+    "correct_answer": "O(V + E)",
+    "incorrect_answers": [
+      "O(V^2)",
+      "O(E^2)",
+      "O(V * E)"
+    ],
+    "explanation": "One list per vertex plus one entry per edge; an adjacency matrix is O(V^2)."
+  },
+  {
+    "id": "dsa-014",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "hard",
+    "question": "Appending to a dynamic array (like Java's ArrayList) has what amortized time complexity?",
+    "correct_answer": "O(1)",
+    "incorrect_answers": [
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "explanation": "Occasional resizes copy every element, but doubling capacity spreads that cost across many appends."
+  },
+  {
+    "id": "dsa-015",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "hard",
+    "question": "Which combination of data structures gives an LRU cache O(1) get and put?",
+    "correct_answer": "Hash map + doubly linked list",
+    "incorrect_answers": [
+      "Array + stack",
+      "Binary search tree + queue",
+      "Min-heap + singly linked list"
+    ],
+    "explanation": "The map finds the node in O(1); the doubly linked list moves it to the front and evicts the tail in O(1)."
+  },
+  {
+    "id": "dsa-016",
+    "track": "dsa",
+    "category": "Data Structures",
+    "difficulty": "medium",
+    "question": "Which algorithm detects a cycle in a linked list using two pointers that move at different speeds?",
+    "correct_answer": "Floyd's tortoise and hare",
+    "incorrect_answers": [
+      "Kadane's algorithm",
+      "Dijkstra's algorithm",
+      "Boyer-Moore voting algorithm"
+    ],
+    "explanation": "If a cycle exists, the fast pointer eventually laps the slow one."
+  },
+  {
+    "id": "oop-001",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "easy",
+    "question": "Which OOP principle allows a child class to reuse the methods and properties of a parent class?",
+    "correct_answer": "Inheritance",
+    "incorrect_answers": [
+      "Encapsulation",
+      "Polymorphism",
+      "Abstraction"
+    ],
+    "explanation": "The child class extends the parent and gets its accessible members."
+  },
+  {
+    "id": "oop-002",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "In Java, which keyword prevents a class from being subclassed?",
+    "correct_answer": "final",
+    "incorrect_answers": [
+      "static",
+      "private",
+      "abstract"
+    ],
+    "explanation": "A final class cannot be extended; String is a well-known example."
+  },
+  {
+    "id": "oop-003",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "easy",
+    "question": "Which OOP principle bundles data with the methods that operate on it and restricts direct access to internal state?",
+    "correct_answer": "Encapsulation",
+    "incorrect_answers": [
+      "Inheritance",
+      "Polymorphism",
+      "Abstraction"
+    ],
+    "explanation": "Fields are kept private and exposed through controlled methods."
+  },
+  {
+    "id": "oop-004",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "A Shape variable calls draw(), and the Circle or Square version runs depending on the actual object. What is this called?",
+    "correct_answer": "Runtime polymorphism (method overriding)",
+    "incorrect_answers": [
+      "Method overloading",
+      "Encapsulation",
+      "Constructor chaining"
+    ],
+    "explanation": "The JVM picks the overridden method based on the object's real type at runtime."
+  },
+  {
+    "id": "oop-005",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "In Java, which of these is resolved at compile time?",
+    "correct_answer": "Method overloading",
+    "incorrect_answers": [
+      "Method overriding",
+      "Dynamic dispatch",
+      "Late binding"
+    ],
+    "explanation": "Overloads are chosen from the argument types the compiler sees; overrides are chosen at runtime."
+  },
+  {
+    "id": "oop-006",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "easy",
+    "question": "Defining an interface that states what an object can do without saying how it does it is an example of which principle?",
+    "correct_answer": "Abstraction",
+    "incorrect_answers": [
+      "Inheritance",
+      "Method overloading",
+      "Garbage collection"
+    ],
+    "explanation": "Callers depend on the contract, not the implementation."
+  },
+  {
+    "id": "oop-007",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "easy",
+    "question": "In Java, what happens if you try to instantiate an abstract class with new?",
+    "correct_answer": "Compile-time error",
+    "incorrect_answers": [
+      "It runs but all methods return null",
+      "A runtime exception only when a method is called",
+      "It creates an empty subclass automatically"
+    ],
+    "explanation": "Abstract classes are incomplete by design and cannot be instantiated directly."
+  },
+  {
+    "id": "oop-008",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "Which statement about Java is true?",
+    "correct_answer": "A class can extend only one class but implement many interfaces",
+    "incorrect_answers": [
+      "A class can extend many classes but implement only one interface",
+      "A class can extend many classes and implement many interfaces",
+      "A class can implement interfaces only if it extends nothing"
+    ],
+    "explanation": "Java avoids multiple class inheritance but allows multiple interface implementation."
+  },
+  {
+    "id": "oop-009",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "A Car holds an Engine object as a field. Which relationship is this?",
+    "correct_answer": "Composition (has-a)",
+    "incorrect_answers": [
+      "Inheritance (is-a)",
+      "Polymorphism",
+      "Method overloading"
+    ],
+    "explanation": "Car is built from an Engine; it is not a kind of Engine."
+  },
+  {
+    "id": "oop-010",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "The Single Responsibility Principle says a class should have:",
+    "correct_answer": "Only one reason to change",
+    "incorrect_answers": [
+      "Only one method",
+      "Only one instance",
+      "Only one parent class"
+    ],
+    "explanation": "Each class should own one cohesive responsibility."
+  },
+  {
+    "id": "oop-011",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "hard",
+    "question": "The Liskov Substitution Principle requires that:",
+    "correct_answer": "Subtypes can replace their base types without breaking program correctness",
+    "incorrect_answers": [
+      "Classes are open for extension but closed for modification",
+      "High-level modules do not depend on low-level modules",
+      "Clients are not forced to depend on methods they do not use"
+    ],
+    "explanation": "The other three options describe the Open/Closed, Dependency Inversion, and Interface Segregation principles."
+  },
+  {
+    "id": "oop-012",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "The Open/Closed Principle says software entities should be:",
+    "correct_answer": "Open for extension, closed for modification",
+    "incorrect_answers": [
+      "Open for modification, closed for extension",
+      "Public by default, private when needed",
+      "Immutable once instantiated"
+    ],
+    "explanation": "You add behavior by extending, not by editing tested code."
+  },
+  {
+    "id": "oop-013",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "When a class receives the objects it depends on from outside instead of creating them itself, this is called:",
+    "correct_answer": "Dependency injection",
+    "incorrect_answers": [
+      "Method chaining",
+      "Reflection",
+      "Encapsulation"
+    ],
+    "explanation": "It is how Spring wires beans together and makes classes easier to test."
+  },
+  {
+    "id": "oop-014",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "In Spring Boot, which annotation marks a class as a controller whose methods return data (such as JSON) directly in the response body?",
+    "correct_answer": "@RestController",
+    "incorrect_answers": [
+      "@Repository",
+      "@Entity",
+      "@Configuration"
+    ],
+    "explanation": "@RestController combines @Controller and @ResponseBody."
+  },
+  {
+    "id": "oop-015",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "medium",
+    "question": "Which design pattern ensures a class has only one instance and provides a global access point to it?",
+    "correct_answer": "Singleton",
+    "incorrect_answers": [
+      "Factory",
+      "Observer",
+      "Decorator"
+    ],
+    "explanation": "The constructor is private and a static method returns the shared instance."
+  },
+  {
+    "id": "oop-016",
+    "track": "oop",
+    "category": "OOP Concepts",
+    "difficulty": "easy",
+    "question": "Which Java access modifier makes a member visible only within its own class?",
+    "correct_answer": "private",
+    "incorrect_answers": [
+      "protected",
+      "public",
+      "default (package-private)"
+    ],
+    "explanation": "protected and package-private members are also visible to other classes in the same package."
+  },
+  {
+    "id": "fun-001",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "easy",
+    "question": "The famous 1947 'first actual bug' story involved a moth found in which computer?",
+    "correct_answer": "Harvard Mark II",
+    "incorrect_answers": [
+      "ENIAC",
+      "UNIVAC I",
+      "Colossus"
+    ],
+    "explanation": "Operators taped the moth into the logbook; engineers were already calling glitches 'bugs'."
+  },
+  {
+    "id": "fun-002",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "easy",
+    "question": "The Python programming language is named after what?",
+    "correct_answer": "Monty Python's Flying Circus",
+    "incorrect_answers": [
+      "A species of snake",
+      "A character in a Guido van Rossum novel",
+      "An acronym of its original authors"
+    ],
+    "explanation": "Guido van Rossum was a fan of the British comedy group."
+  },
+  {
+    "id": "fun-003",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "easy",
+    "question": "What was the original working name of the Java programming language?",
+    "correct_answer": "Oak",
+    "incorrect_answers": [
+      "Mocha",
+      "Brew",
+      "Cafe"
+    ],
+    "explanation": "It was named after an oak tree outside creator James Gosling's office."
+  },
+  {
+    "id": "fun-004",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "Who created JavaScript in 1995 while working at Netscape?",
+    "correct_answer": "Brendan Eich",
+    "incorrect_answers": [
+      "James Gosling",
+      "Tim Berners-Lee",
+      "Marc Andreessen"
+    ],
+    "explanation": "It first shipped in Netscape Navigator."
+  },
+  {
+    "id": "fun-005",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "Which organization hosted the world's first website, created by Tim Berners-Lee?",
+    "correct_answer": "CERN",
+    "incorrect_answers": [
+      "MIT",
+      "NASA",
+      "Stanford University"
+    ],
+    "explanation": "The first site explained the World Wide Web project itself."
+  },
+  {
+    "id": "fun-006",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "Who is credited with choosing the @ symbol for email addresses in 1971?",
+    "correct_answer": "Ray Tomlinson",
+    "incorrect_answers": [
+      "Vint Cerf",
+      "Tim Berners-Lee",
+      "Dennis Ritchie"
+    ],
+    "explanation": "He used it to separate the user name from the host name."
+  },
+  {
+    "id": "fun-007",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "Which classic 1978 book popularized the 'Hello, World!' program for beginners?",
+    "correct_answer": "The C Programming Language",
+    "incorrect_answers": [
+      "The Pragmatic Programmer",
+      "Structure and Interpretation of Computer Programs",
+      "Code Complete"
+    ],
+    "explanation": "Kernighan and Ritchie's book (K&R) made it the traditional first program."
+  },
+  {
+    "id": "fun-008",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "easy",
+    "question": "Which version control system did Linus Torvalds create in 2005?",
+    "correct_answer": "Git",
+    "incorrect_answers": [
+      "Subversion",
+      "Mercurial",
+      "CVS"
+    ],
+    "explanation": "It was built to manage Linux kernel development."
+  },
+  {
+    "id": "fun-009",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "In which year did Linus Torvalds first announce the Linux kernel?",
+    "correct_answer": "1991",
+    "incorrect_answers": [
+      "1985",
+      "1995",
+      "2001"
+    ],
+    "explanation": "He announced it as a hobby project on a Usenet newsgroup."
+  },
+  {
+    "id": "fun-010",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "Who is widely credited with writing the first algorithm intended for a machine, Babbage's Analytical Engine?",
+    "correct_answer": "Ada Lovelace",
+    "incorrect_answers": [
+      "Grace Hopper",
+      "Alan Turing",
+      "Margaret Hamilton"
+    ],
+    "explanation": "Her 1843 notes included a method for computing Bernoulli numbers."
+  },
+  {
+    "id": "fun-011",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "Unix time counts seconds since which date?",
+    "correct_answer": "January 1, 1970 (UTC)",
+    "incorrect_answers": [
+      "January 1, 1900 (UTC)",
+      "January 1, 1980 (UTC)",
+      "January 1, 2000 (UTC)"
+    ],
+    "explanation": "This reference point is called the Unix epoch."
+  },
+  {
+    "id": "fun-012",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "easy",
+    "question": "The Y2K bug was caused mainly by software storing years using how many digits?",
+    "correct_answer": "Two",
+    "incorrect_answers": [
+      "One",
+      "Three",
+      "Four"
+    ],
+    "explanation": "Going from '99 to '00 looked like moving backwards in time."
+  },
+  {
+    "id": "fun-013",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "Google's name is a play on 'googol'. What is a googol?",
+    "correct_answer": "1 followed by 100 zeros",
+    "incorrect_answers": [
+      "1 followed by 10 zeros",
+      "1 followed by 1,000 zeros",
+      "100 factorial"
+    ],
+    "explanation": "A googol is 10^100."
+  },
+  {
+    "id": "fun-014",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "Bluetooth is named after a 10th-century king of which country?",
+    "correct_answer": "Denmark",
+    "incorrect_answers": [
+      "Sweden",
+      "Finland",
+      "Iceland"
+    ],
+    "explanation": "King Harald 'Bluetooth' Gormsson is remembered for uniting Danish tribes."
+  },
+  {
+    "id": "fun-015",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "In JavaScript, what does 0.1 + 0.2 === 0.3 evaluate to?",
+    "correct_answer": "false",
+    "incorrect_answers": [
+      "true",
+      "undefined",
+      "NaN"
+    ],
+    "explanation": "Binary floating point cannot represent 0.1 or 0.2 exactly; the sum is 0.30000000000000004."
+  },
+  {
+    "id": "fun-016",
+    "track": "fun-facts",
+    "category": "Fun Facts",
+    "difficulty": "medium",
+    "question": "Mosaic, one of the first widely used graphical web browsers, was developed at which institution?",
+    "correct_answer": "NCSA (University of Illinois)",
+    "incorrect_answers": [
+      "CERN",
+      "Netscape Communications",
+      "Bell Labs"
+    ],
+    "explanation": "Mosaic came out of the National Center for Supercomputing Applications."
+  }
+]   

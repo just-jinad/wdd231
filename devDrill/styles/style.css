@@ -3,7 +3,7 @@
 :root {
   /* Color scheme */
   --color-primary-dark: #1B6E5B;
-  --color-primary: #2EA87D;
+  --color-primary: #217A60;
   --color-accent: #7BD2A0;
   --color-bg: #F2F2F0;
   --color-surface: #FFFFFF;
@@ -56,7 +56,6 @@ h1, h2, h3 {
   font-family: var(--font-body);
   font-weight: 400;
   font-size: 1rem;
-  opacity: 0.85;
 }
 
 main {
@@ -80,7 +79,7 @@ h2 {
 .site-name-value {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   margin: 0 0 var(--space-3);
 }
 
@@ -121,7 +120,6 @@ ul {
 
 .swatch-usage {
   font-size: 0.9rem;
-  opacity: 0.9;
 }
 
 /* Typography samples */
@@ -130,7 +128,7 @@ ul {
 }
 
 .font-heading-sample {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
 }
 
 .font-sample-note,
