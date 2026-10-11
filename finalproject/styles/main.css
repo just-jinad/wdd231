@@ -939,7 +939,7 @@ dialog::backdrop {
 
 .empty-list,
 .empty-state {
-  color: var(--color-primary-dark);
+  color: var(--color-text);
 }
 
 .empty-state {
