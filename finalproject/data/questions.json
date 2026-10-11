@@ -6,11 +6,7 @@
     "difficulty": "easy",
     "question": "What is the time complexity of binary search on a sorted array of n elements?",
     "correct_answer": "O(log n)",
-    "incorrect_answers": [
-      "O(n)",
-      "O(n log n)",
-      "O(1)"
-    ],
+    "incorrect_answers": ["O(n)", "O(n log n)", "O(1)"],
     "explanation": "Each comparison halves the remaining search space."
   },
   {
@@ -20,11 +16,7 @@
     "difficulty": "easy",
     "question": "What is the worst-case time complexity of bubble sort?",
     "correct_answer": "O(n^2)",
-    "incorrect_answers": [
-      "O(n)",
-      "O(n log n)",
-      "O(log n)"
-    ],
+    "incorrect_answers": ["O(n)", "O(n log n)", "O(log n)"],
     "explanation": "On reversed input, nested passes make n(n-1)/2 adjacent comparisons."
   },
   {
@@ -34,11 +26,7 @@
     "difficulty": "medium",
     "question": "What is the time complexity of this loop? for (int i = 1; i < n; i *= 2) { ... }",
     "correct_answer": "O(log n)",
-    "incorrect_answers": [
-      "O(n)",
-      "O(n^2)",
-      "O(sqrt n)"
-    ],
+    "incorrect_answers": ["O(n)", "O(n^2)", "O(sqrt n)"],
     "explanation": "i doubles on every pass, so the loop runs about log2(n) times."
   },
   {
@@ -48,11 +36,7 @@
     "difficulty": "medium",
     "question": "What is the worst-case time complexity of quicksort?",
     "correct_answer": "O(n^2)",
-    "incorrect_answers": [
-      "O(n log n)",
-      "O(n)",
-      "O(log n)"
-    ],
+    "incorrect_answers": ["O(n log n)", "O(n)", "O(log n)"],
     "explanation": "Consistently bad pivots (such as the last element on already sorted input) create lopsided partitions."
   },
   {
@@ -76,11 +60,7 @@
     "difficulty": "medium",
     "question": "What is the auxiliary space complexity of a standard array-based merge sort?",
     "correct_answer": "O(n)",
-    "incorrect_answers": [
-      "O(1)",
-      "O(log n)",
-      "O(n^2)"
-    ],
+    "incorrect_answers": ["O(1)", "O(log n)", "O(n^2)"],
     "explanation": "The merge step needs a temporary buffer proportional to the input size."
   },
   {
@@ -90,11 +70,7 @@
     "difficulty": "medium",
     "question": "What is the best-case time complexity of insertion sort?",
     "correct_answer": "O(n)",
-    "incorrect_answers": [
-      "O(n^2)",
-      "O(n log n)",
-      "O(log n)"
-    ],
+    "incorrect_answers": ["O(n^2)", "O(n log n)", "O(log n)"],
     "explanation": "On already sorted input, each element needs just one comparison."
   },
   {
@@ -104,11 +80,7 @@
     "difficulty": "easy",
     "question": "Which data structure does an iterative breadth-first search (BFS) use to track the nodes to visit next?",
     "correct_answer": "Queue",
-    "incorrect_answers": [
-      "Stack",
-      "Min-heap",
-      "Hash set"
-    ],
+    "incorrect_answers": ["Stack", "Min-heap", "Hash set"],
     "explanation": "A FIFO queue makes BFS explore the graph level by level."
   },
   {
@@ -188,11 +160,7 @@
     "difficulty": "medium",
     "question": "What is the time complexity of the naive recursive Fibonacci, fib(n) = fib(n-1) + fib(n-2)?",
     "correct_answer": "O(2^n)",
-    "incorrect_answers": [
-      "O(n)",
-      "O(n^2)",
-      "O(log n)"
-    ],
+    "incorrect_answers": ["O(n)", "O(n^2)", "O(log n)"],
     "explanation": "Each call spawns two more with almost no shared work, so the call tree grows exponentially (tight bound is about 1.618^n, bounded above by 2^n)."
   },
   {
@@ -202,11 +170,7 @@
     "difficulty": "hard",
     "question": "What is the theoretical lower bound for comparison-based sorting in the worst case?",
     "correct_answer": "Omega(n log n)",
-    "incorrect_answers": [
-      "Omega(n)",
-      "Omega(log n)",
-      "Omega(n^2)"
-    ],
+    "incorrect_answers": ["Omega(n)", "Omega(log n)", "Omega(n^2)"],
     "explanation": "A decision tree needs n! leaves, so its height is at least log2(n!), which is Theta(n log n)."
   },
   {
@@ -216,11 +180,7 @@
     "difficulty": "medium",
     "question": "Using a hash map, what is the average-case time complexity of the classic Two Sum problem (find two numbers that add up to a target)?",
     "correct_answer": "O(n)",
-    "incorrect_answers": [
-      "O(n^2)",
-      "O(n log n)",
-      "O(log n)"
-    ],
+    "incorrect_answers": ["O(n^2)", "O(n log n)", "O(log n)"],
     "explanation": "One pass: for each number, look up its complement in the map in O(1) average time."
   },
   {
@@ -230,11 +190,7 @@
     "difficulty": "easy",
     "question": "Which data structure uses LIFO (Last In, First Out) ordering?",
     "correct_answer": "Stack",
-    "incorrect_answers": [
-      "Queue",
-      "Linked list",
-      "Hash map"
-    ],
+    "incorrect_answers": ["Queue", "Linked list", "Hash map"],
     "explanation": "The most recently pushed item is the first one popped."
   },
   {
@@ -244,11 +200,7 @@
     "difficulty": "easy",
     "question": "Which data structure uses FIFO (First In, First Out) ordering?",
     "correct_answer": "Queue",
-    "incorrect_answers": [
-      "Stack",
-      "Binary search tree",
-      "Graph"
-    ],
+    "incorrect_answers": ["Stack", "Binary search tree", "Graph"],
     "explanation": "Items leave in the same order they entered, like a line at a counter."
   },
   {
@@ -258,11 +210,7 @@
     "difficulty": "easy",
     "question": "What is the time complexity of accessing an array element by its index?",
     "correct_answer": "O(1)",
-    "incorrect_answers": [
-      "O(n)",
-      "O(log n)",
-      "O(n log n)"
-    ],
+    "incorrect_answers": ["O(n)", "O(log n)", "O(n log n)"],
     "explanation": "The address is computed directly: base address + index * element size."
   },
   {
@@ -300,11 +248,7 @@
     "difficulty": "medium",
     "question": "Which traversal of a binary search tree visits the keys in sorted order?",
     "correct_answer": "In-order",
-    "incorrect_answers": [
-      "Pre-order",
-      "Post-order",
-      "Level-order"
-    ],
+    "incorrect_answers": ["Pre-order", "Post-order", "Level-order"],
     "explanation": "In-order visits left subtree, node, then right subtree, which matches the BST ordering."
   },
   {
@@ -314,11 +258,7 @@
     "difficulty": "medium",
     "question": "What is the worst-case time complexity of searching an unbalanced binary search tree with n nodes?",
     "correct_answer": "O(n)",
-    "incorrect_answers": [
-      "O(1)",
-      "O(log n)",
-      "O(n log n)"
-    ],
+    "incorrect_answers": ["O(1)", "O(log n)", "O(n log n)"],
     "explanation": "Inserting already sorted keys produces a chain-shaped tree, so search degrades to a linear scan."
   },
   {
@@ -328,11 +268,7 @@
     "difficulty": "medium",
     "question": "Which of these is a self-balancing binary search tree?",
     "correct_answer": "Red-black tree",
-    "incorrect_answers": [
-      "Binary heap",
-      "Trie",
-      "Hash table"
-    ],
+    "incorrect_answers": ["Binary heap", "Trie", "Hash table"],
     "explanation": "Red-black trees rebalance on insert and delete to keep height O(log n)."
   },
   {
@@ -356,11 +292,7 @@
     "difficulty": "easy",
     "question": "Which data structure is most commonly used to implement a priority queue?",
     "correct_answer": "Binary heap",
-    "incorrect_answers": [
-      "Stack",
-      "Singly linked list",
-      "Hash table"
-    ],
+    "incorrect_answers": ["Stack", "Singly linked list", "Hash table"],
     "explanation": "A heap gives O(log n) insert and remove-min."
   },
   {
@@ -370,11 +302,7 @@
     "difficulty": "easy",
     "question": "Which data structure is the standard choice for checking whether brackets like ( [ { } ] ) are balanced?",
     "correct_answer": "Stack",
-    "incorrect_answers": [
-      "Queue",
-      "Hash set",
-      "Binary tree"
-    ],
+    "incorrect_answers": ["Queue", "Hash set", "Binary tree"],
     "explanation": "Push openers; each closer must match the most recent opener, which is exactly LIFO."
   },
   {
@@ -384,11 +312,7 @@
     "difficulty": "medium",
     "question": "Which data structure is built for fast prefix searches, such as autocomplete?",
     "correct_answer": "Trie",
-    "incorrect_answers": [
-      "Hash table",
-      "Max-heap",
-      "Doubly linked list"
-    ],
+    "incorrect_answers": ["Hash table", "Max-heap", "Doubly linked list"],
     "explanation": "Each edge represents a character, so all words sharing a prefix share a path."
   },
   {
@@ -398,11 +322,7 @@
     "difficulty": "medium",
     "question": "What is the space complexity of a graph stored as an adjacency list, with V vertices and E edges?",
     "correct_answer": "O(V + E)",
-    "incorrect_answers": [
-      "O(V^2)",
-      "O(E^2)",
-      "O(V * E)"
-    ],
+    "incorrect_answers": ["O(V^2)", "O(E^2)", "O(V * E)"],
     "explanation": "One list per vertex plus one entry per edge; an adjacency matrix is O(V^2)."
   },
   {
@@ -412,11 +332,7 @@
     "difficulty": "hard",
     "question": "Appending to a dynamic array (like Java's ArrayList) has what amortized time complexity?",
     "correct_answer": "O(1)",
-    "incorrect_answers": [
-      "O(n)",
-      "O(log n)",
-      "O(n log n)"
-    ],
+    "incorrect_answers": ["O(n)", "O(log n)", "O(n log n)"],
     "explanation": "Occasional resizes copy every element, but doubling capacity spreads that cost across many appends."
   },
   {
@@ -454,11 +370,7 @@
     "difficulty": "easy",
     "question": "Which OOP principle allows a child class to reuse the methods and properties of a parent class?",
     "correct_answer": "Inheritance",
-    "incorrect_answers": [
-      "Encapsulation",
-      "Polymorphism",
-      "Abstraction"
-    ],
+    "incorrect_answers": ["Encapsulation", "Polymorphism", "Abstraction"],
     "explanation": "The child class extends the parent and gets its accessible members."
   },
   {
@@ -468,11 +380,7 @@
     "difficulty": "medium",
     "question": "In Java, which keyword prevents a class from being subclassed?",
     "correct_answer": "final",
-    "incorrect_answers": [
-      "static",
-      "private",
-      "abstract"
-    ],
+    "incorrect_answers": ["static", "private", "abstract"],
     "explanation": "A final class cannot be extended; String is a well-known example."
   },
   {
@@ -482,11 +390,7 @@
     "difficulty": "easy",
     "question": "Which OOP principle bundles data with the methods that operate on it and restricts direct access to internal state?",
     "correct_answer": "Encapsulation",
-    "incorrect_answers": [
-      "Inheritance",
-      "Polymorphism",
-      "Abstraction"
-    ],
+    "incorrect_answers": ["Inheritance", "Polymorphism", "Abstraction"],
     "explanation": "Fields are kept private and exposed through controlled methods."
   },
   {
@@ -622,11 +526,7 @@
     "difficulty": "medium",
     "question": "When a class receives the objects it depends on from outside instead of creating them itself, this is called:",
     "correct_answer": "Dependency injection",
-    "incorrect_answers": [
-      "Method chaining",
-      "Reflection",
-      "Encapsulation"
-    ],
+    "incorrect_answers": ["Method chaining", "Reflection", "Encapsulation"],
     "explanation": "It is how Spring wires beans together and makes classes easier to test."
   },
   {
@@ -636,11 +536,7 @@
     "difficulty": "medium",
     "question": "In Spring Boot, which annotation marks a class as a controller whose methods return data (such as JSON) directly in the response body?",
     "correct_answer": "@RestController",
-    "incorrect_answers": [
-      "@Repository",
-      "@Entity",
-      "@Configuration"
-    ],
+    "incorrect_answers": ["@Repository", "@Entity", "@Configuration"],
     "explanation": "@RestController combines @Controller and @ResponseBody."
   },
   {
@@ -650,11 +546,7 @@
     "difficulty": "medium",
     "question": "Which design pattern ensures a class has only one instance and provides a global access point to it?",
     "correct_answer": "Singleton",
-    "incorrect_answers": [
-      "Factory",
-      "Observer",
-      "Decorator"
-    ],
+    "incorrect_answers": ["Factory", "Observer", "Decorator"],
     "explanation": "The constructor is private and a static method returns the shared instance."
   },
   {
@@ -664,11 +556,7 @@
     "difficulty": "easy",
     "question": "Which Java access modifier makes a member visible only within its own class?",
     "correct_answer": "private",
-    "incorrect_answers": [
-      "protected",
-      "public",
-      "default (package-private)"
-    ],
+    "incorrect_answers": ["protected", "public", "default (package-private)"],
     "explanation": "protected and package-private members are also visible to other classes in the same package."
   },
   {
@@ -678,11 +566,7 @@
     "difficulty": "easy",
     "question": "The famous 1947 'first actual bug' story involved a moth found in which computer?",
     "correct_answer": "Harvard Mark II",
-    "incorrect_answers": [
-      "ENIAC",
-      "UNIVAC I",
-      "Colossus"
-    ],
+    "incorrect_answers": ["ENIAC", "UNIVAC I", "Colossus"],
     "explanation": "Operators taped the moth into the logbook; engineers were already calling glitches 'bugs'."
   },
   {
@@ -706,11 +590,7 @@
     "difficulty": "easy",
     "question": "What was the original working name of the Java programming language?",
     "correct_answer": "Oak",
-    "incorrect_answers": [
-      "Mocha",
-      "Brew",
-      "Cafe"
-    ],
+    "incorrect_answers": ["Mocha", "Brew", "Cafe"],
     "explanation": "It was named after an oak tree outside creator James Gosling's office."
   },
   {
@@ -734,11 +614,7 @@
     "difficulty": "medium",
     "question": "Which organization hosted the world's first website, created by Tim Berners-Lee?",
     "correct_answer": "CERN",
-    "incorrect_answers": [
-      "MIT",
-      "NASA",
-      "Stanford University"
-    ],
+    "incorrect_answers": ["MIT", "NASA", "Stanford University"],
     "explanation": "The first site explained the World Wide Web project itself."
   },
   {
@@ -748,11 +624,7 @@
     "difficulty": "medium",
     "question": "Who is credited with choosing the @ symbol for email addresses in 1971?",
     "correct_answer": "Ray Tomlinson",
-    "incorrect_answers": [
-      "Vint Cerf",
-      "Tim Berners-Lee",
-      "Dennis Ritchie"
-    ],
+    "incorrect_answers": ["Vint Cerf", "Tim Berners-Lee", "Dennis Ritchie"],
     "explanation": "He used it to separate the user name from the host name."
   },
   {
@@ -776,11 +648,7 @@
     "difficulty": "easy",
     "question": "Which version control system did Linus Torvalds create in 2005?",
     "correct_answer": "Git",
-    "incorrect_answers": [
-      "Subversion",
-      "Mercurial",
-      "CVS"
-    ],
+    "incorrect_answers": ["Subversion", "Mercurial", "CVS"],
     "explanation": "It was built to manage Linux kernel development."
   },
   {
@@ -790,11 +658,7 @@
     "difficulty": "medium",
     "question": "In which year did Linus Torvalds first announce the Linux kernel?",
     "correct_answer": "1991",
-    "incorrect_answers": [
-      "1985",
-      "1995",
-      "2001"
-    ],
+    "incorrect_answers": ["1985", "1995", "2001"],
     "explanation": "He announced it as a hobby project on a Usenet newsgroup."
   },
   {
@@ -804,11 +668,7 @@
     "difficulty": "medium",
     "question": "Who is widely credited with writing the first algorithm intended for a machine, Babbage's Analytical Engine?",
     "correct_answer": "Ada Lovelace",
-    "incorrect_answers": [
-      "Grace Hopper",
-      "Alan Turing",
-      "Margaret Hamilton"
-    ],
+    "incorrect_answers": ["Grace Hopper", "Alan Turing", "Margaret Hamilton"],
     "explanation": "Her 1843 notes included a method for computing Bernoulli numbers."
   },
   {
@@ -832,11 +692,7 @@
     "difficulty": "easy",
     "question": "The Y2K bug was caused mainly by software storing years using how many digits?",
     "correct_answer": "Two",
-    "incorrect_answers": [
-      "One",
-      "Three",
-      "Four"
-    ],
+    "incorrect_answers": ["One", "Three", "Four"],
     "explanation": "Going from '99 to '00 looked like moving backwards in time."
   },
   {
@@ -860,11 +716,7 @@
     "difficulty": "medium",
     "question": "Bluetooth is named after a 10th-century king of which country?",
     "correct_answer": "Denmark",
-    "incorrect_answers": [
-      "Sweden",
-      "Finland",
-      "Iceland"
-    ],
+    "incorrect_answers": ["Sweden", "Finland", "Iceland"],
     "explanation": "King Harald 'Bluetooth' Gormsson is remembered for uniting Danish tribes."
   },
   {
@@ -874,11 +726,7 @@
     "difficulty": "medium",
     "question": "In JavaScript, what does 0.1 + 0.2 === 0.3 evaluate to?",
     "correct_answer": "false",
-    "incorrect_answers": [
-      "true",
-      "undefined",
-      "NaN"
-    ],
+    "incorrect_answers": ["true", "undefined", "NaN"],
     "explanation": "Binary floating point cannot represent 0.1 or 0.2 exactly; the sum is 0.30000000000000004."
   },
   {
@@ -888,11 +736,7 @@
     "difficulty": "medium",
     "question": "Mosaic, one of the first widely used graphical web browsers, was developed at which institution?",
     "correct_answer": "NCSA (University of Illinois)",
-    "incorrect_answers": [
-      "CERN",
-      "Netscape Communications",
-      "Bell Labs"
-    ],
+    "incorrect_answers": ["CERN", "Netscape Communications", "Bell Labs"],
     "explanation": "Mosaic came out of the National Center for Supercomputing Applications."
   }
-]   
+]

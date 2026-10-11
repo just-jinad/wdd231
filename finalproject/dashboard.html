@@ -1,55 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard | DevDrill</title>
-  <meta name="description" content="Review your DevDrill quiz progress, earned badges and saved questions.">
-  <meta name="author" content="Temi (Tope Jinad)">
-  <meta property="og:title" content="DevDrill Dashboard: Track Your Progress">
-  <meta property="og:description" content="Review your DevDrill quiz progress, celebrate earned badges and revisit the computer science questions you missed.">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="DevDrill">
-  <meta property="og:image" content="https://just-jinad.github.io/wdd231/finalproject/images/hero.svg">
-  <meta property="og:url" content="https://just-jinad.github.io/wdd231/finalproject/dashboard.html">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;display=swap">
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/home.css">
-  <script type="module" src="scripts/main.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header"><div class="header-inner">
-    <a class="brand" href="index.html"><img src="images/favicon.svg" width="32" height="32" alt="DevDrill logo"><span>DevDrill</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="visually-hidden">Menu</span><span class="nav-toggle-icon" aria-hidden="true"></span></button>
-    <nav id="primary-nav" class="primary-nav" aria-label="Primary"><ul class="nav-list">
-      <li><a href="index.html">Home</a></li><li><a href="quiz.html">Practice</a></li><li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
-    </ul></nav>
-  </div></header>
-  <main id="main" class="dashboard-page">
-    <section class="page-head"><h1>Dashboard</h1><p>See your progress, celebrate your streaks and focus on the questions you missed.</p></section>
-    <div id="dashboard">
-      <section class="stats-grid" aria-label="Progress summary">
-        <div class="stat-card"><span>Rounds played</span><strong id="stat-rounds">0</strong></div>
-        <div class="stat-card"><span>Accuracy</span><strong id="stat-accuracy">0%</strong></div>
-        <div class="stat-card"><span>Best streak</span><strong id="stat-streak">0</strong></div>
-        <div class="stat-card"><span>Saved to review</span><strong id="stat-missed">0</strong></div>
-      </section>
-      <p id="dashboard-empty" class="empty-state">Complete a drill to start building your dashboard.</p>
-      <div class="dashboard-grid">
-        <section class="dashboard-section"><h2>Badges</h2><ul id="badge-list" class="badge-grid"></ul></section>
-        <section class="dashboard-section"><h2>Recent rounds</h2><ul id="history-list" class="history-list"></ul></section>
-        <section class="dashboard-section"><h2>Questions to review</h2><ul id="missed-list" class="missed-list"></ul><a class="button button-secondary" href="quiz.html?mode=review">Review saved questions</a></section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard | DevDrill</title>
+    <meta
+      name="description"
+      content="Review your DevDrill quiz progress, earned badges and saved questions."
+    />
+    <meta name="author" content="Temi (Tope Jinad)" />
+    <meta
+      property="og:title"
+      content="DevDrill Dashboard: Track Your Progress"
+    />
+    <meta
+      property="og:description"
+      content="Review your DevDrill quiz progress, celebrate earned badges and revisit the computer science questions you missed."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DevDrill" />
+    <meta
+      property="og:image"
+      content="https://just-jinad.github.io/wdd231/finalproject/images/hero.svg"
+    />
+    <meta
+      property="og:url"
+      content="https://just-jinad.github.io/wdd231/finalproject/dashboard.html"
+    />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <script type="module" src="scripts/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/favicon.svg"
+            width="32"
+            height="32"
+            alt="DevDrill logo"
+          /><span>DevDrill</span></a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="visually-hidden">Menu</span
+          ><span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quiz.html">Practice</a></li>
+            <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="dashboard-actions"><a class="button" href="quiz.html">Start a drill</a><button class="button button-danger" type="button" data-action="clear-progress">Clear progress</button></div>
-    </div>
-    <dialog id="clear-dialog" class="answer-dialog" aria-labelledby="clear-dialog-title">
-      <div class="dialog-body"><h2 id="clear-dialog-title" data-dialog-title>Clear progress?</h2><p data-dialog-message></p><div class="feedback-actions"><button type="button" class="button button-danger" data-confirm-clear>Clear it</button><button type="button" class="button button-secondary" data-close>Cancel</button></div></div>
-    </dialog>
-  </main>
-  <footer class="site-footer"><div class="footer-inner"><p class="footer-credit">&copy; 2026 Temi (Tope Jinad) &middot; WDD231 final project</p><nav aria-label="Footer"><ul class="footer-links"><li><a href="submit.html">Submit feedback</a></li><li><a href="attributions.html">Attributions</a></li></ul></nav></div></footer>
-</body>
+    </header>
+    <main id="main" class="dashboard-page">
+      <section class="page-head">
+        <h1>Dashboard</h1>
+        <p>
+          See your progress, celebrate your streaks and focus on the questions
+          you missed.
+        </p>
+      </section>
+      <div id="dashboard">
+        <section class="stats-grid" aria-label="Progress summary">
+          <div class="stat-card">
+            <span>Rounds played</span><strong id="stat-rounds">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Accuracy</span><strong id="stat-accuracy">0%</strong>
+          </div>
+          <div class="stat-card">
+            <span>Best streak</span><strong id="stat-streak">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Saved to review</span><strong id="stat-missed">0</strong>
+          </div>
+        </section>
+        <p id="dashboard-empty" class="empty-state">
+          Complete a drill to start building your dashboard.
+        </p>
+        <div class="dashboard-grid">
+          <section class="dashboard-section">
+            <h2>Badges</h2>
+            <ul id="badge-list" class="badge-grid"></ul>
+          </section>
+          <section class="dashboard-section">
+            <h2>Recent rounds</h2>
+            <ul id="history-list" class="history-list"></ul>
+          </section>
+          <section class="dashboard-section">
+            <h2>Questions to review</h2>
+            <ul id="missed-list" class="missed-list"></ul>
+            <a class="button button-secondary" href="quiz.html?mode=review"
+              >Review saved questions</a
+            >
+          </section>
+        </div>
+        <div class="dashboard-actions">
+          <a class="button" href="quiz.html">Start a drill</a
+          ><button
+            class="button button-danger"
+            type="button"
+            data-action="clear-progress"
+          >
+            Clear progress
+          </button>
+        </div>
+      </div>
+      <dialog
+        id="clear-dialog"
+        class="answer-dialog"
+        aria-labelledby="clear-dialog-title"
+      >
+        <div class="dialog-body">
+          <h2 id="clear-dialog-title" data-dialog-title>Clear progress?</h2>
+          <p data-dialog-message></p>
+          <div class="feedback-actions">
+            <button
+              type="button"
+              class="button button-danger"
+              data-confirm-clear
+            >
+              Clear it</button
+            ><button type="button" class="button button-secondary" data-close>
+              Cancel
+            </button>
+          </div>
+        </div>
+      </dialog>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-credit">
+          &copy; 2026 Temi (Tope Jinad) &middot; WDD231 final project
+        </p>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="submit.html">Submit feedback</a></li>
+            <li><a href="attributions.html">Attributions</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

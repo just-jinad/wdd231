@@ -1,5 +1,4 @@
-
-const PREFIX = 'devdrill:';
+const PREFIX = "devdrill:";
 const HISTORY_LIMIT = 20;
 const SUBMISSION_LIMIT = 20;
 
@@ -32,7 +31,7 @@ function write(kind, key, value) {
 // ---- Missed questions (Review Missed mode) --------------------------------
 
 export function getMissed() {
-  return read('localStorage', 'missed', {});
+  return read("localStorage", "missed", {});
 }
 
 export function getMissedList() {
@@ -42,42 +41,47 @@ export function getMissedList() {
 export function addMissed(question) {
   const missed = getMissed();
   missed[question.id] = question;
-  return write('localStorage', 'missed', missed);
+  return write("localStorage", "missed", missed);
 }
 
 export function removeMissed(id) {
   const missed = getMissed();
   delete missed[id];
-  return write('localStorage', 'missed', missed);
+  return write("localStorage", "missed", missed);
 }
 
 // ---- Rounds, totals, best streak -------------------------------------------
 export function getHistory() {
-  return read('localStorage', 'history', []);
+  return read("localStorage", "history", []);
 }
-
 
 export function addRound(summary) {
   const history = [summary, ...getHistory()].slice(0, HISTORY_LIMIT);
-  const totals = read('localStorage', 'totals', { rounds: 0, answered: 0, correct: 0 });
+  const totals = read("localStorage", "totals", {
+    rounds: 0,
+    answered: 0,
+    correct: 0,
+  });
   totals.rounds += 1;
   totals.answered += summary.answered;
   totals.correct += summary.correct;
-  const ok = write('localStorage', 'history', history) && write('localStorage', 'totals', totals);
+  const ok =
+    write("localStorage", "history", history) &&
+    write("localStorage", "totals", totals);
   recordBestStreak(summary.bestStreak);
   return ok;
 }
 
 export function getBestStreak() {
-  return read('localStorage', 'bestStreak', 0);
+  return read("localStorage", "bestStreak", 0);
 }
 
 export function recordBestStreak(streak) {
-  if (streak > getBestStreak()) write('localStorage', 'bestStreak', streak);
+  if (streak > getBestStreak()) write("localStorage", "bestStreak", streak);
 }
 
 export function getStats() {
-  const { rounds, answered, correct } = read('localStorage', 'totals', {
+  const { rounds, answered, correct } = read("localStorage", "totals", {
     rounds: 0,
     answered: 0,
     correct: 0,
@@ -91,9 +95,9 @@ export function getStats() {
 }
 
 export function clearProgress() {
-  for (const key of ['missed', 'history', 'totals', 'bestStreak']) {
+  for (const key of ["missed", "history", "totals", "bestStreak"]) {
     try {
-      area('localStorage')?.removeItem(PREFIX + key);
+      area("localStorage")?.removeItem(PREFIX + key);
     } catch {
       /* nothing to clear if storage is unavailable */
     }
@@ -101,21 +105,23 @@ export function clearProgress() {
 }
 
 export function addSubmission(submission) {
-  const submissions = [submission, ...getSubmissions()].slice(0, SUBMISSION_LIMIT);
-  return write('localStorage', 'submissions', submissions);
+  const submissions = [submission, ...getSubmissions()].slice(
+    0,
+    SUBMISSION_LIMIT,
+  );
+  return write("localStorage", "submissions", submissions);
 }
 
 export function getSubmissions() {
-  return read('localStorage', 'submissions', []);
+  return read("localStorage", "submissions", []);
 }
 
-
 export function getCached(key, ttlMs) {
-  const entry = read('sessionStorage', `cache:${key}`, null);
+  const entry = read("sessionStorage", `cache:${key}`, null);
   if (!entry || Date.now() - entry.t > ttlMs) return null;
   return entry.v;
 }
 
 export function setCached(key, value) {
-  return write('sessionStorage', `cache:${key}`, { t: Date.now(), v: value });
+  return write("sessionStorage", `cache:${key}`, { t: Date.now(), v: value });
 }

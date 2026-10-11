@@ -1,111 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DevDrill | CS Quiz Practice for Students</title>
-  <meta name="description" content="DevDrill is a free CS quiz practice site: algorithms, data structures and OOP questions, survival mode, and a dashboard that tracks what to review.">
-  <meta name="author" content="Tope Jinad">
-  <meta property="og:title" content="DevDrill | CS Quiz Practice for Students">
-  <meta property="og:description" content="Drill CS concepts with short quizzes, survival mode, and a progress dashboard.">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="DevDrill">
-  <meta property="og:image" content="https://just-jinad.github.io/wdd231/finalproject/images/hero.svg">
-  <meta property="og:url" content="https://just-jinad.github.io/wdd231/finalproject/index.html">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;display=swap">
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/home.css">
-  <script type="module" src="scripts/main.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevDrill | CS Quiz Practice for Students</title>
+    <meta
+      name="description"
+      content="DevDrill is a free CS quiz practice site: algorithms, data structures and OOP questions, survival mode, and a dashboard that tracks what to review."
+    />
+    <meta name="author" content="Tope Jinad" />
+    <meta
+      property="og:title"
+      content="DevDrill | CS Quiz Practice for Students"
+    />
+    <meta
+      property="og:description"
+      content="Drill CS concepts with short quizzes, survival mode, and a progress dashboard."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DevDrill" />
+    <meta
+      property="og:image"
+      content="https://just-jinad.github.io/wdd231/finalproject/images/hero.svg"
+    />
+    <meta
+      property="og:url"
+      content="https://just-jinad.github.io/wdd231/finalproject/index.html"
+    />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <script type="module" src="scripts/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html">
-        <img src="images/favicon.svg" width="32" height="32" alt="DevDrill logo">
-        <span>DevDrill</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-        <span class="visually-hidden">Menu</span>
-        <span class="nav-toggle-icon" aria-hidden="true"></span>
-      </button>
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="quiz.html">Practice</a></li>
-          <li><a href="dashboard.html">Dashboard</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-text">
-        <h1 id="hero-heading">Drill the concepts. Level up your code.</h1>
-        <p class="hero-lead">Short CS quizzes with interview-style questions, three lives on the line, and a dashboard that shows what to review next.</p>
-        <a class="button" href="quiz.html">Start a drill</a>
-        <p class="hero-note">Are you ready? It's free, with no sign-up. Your progress stays in your browser.</p>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img
+            src="images/favicon.svg"
+            width="32"
+            height="32"
+            alt="DevDrill logo"
+          />
+          <span>DevDrill</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="visually-hidden">Menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="quiz.html">Practice</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="hero-media">
-        <img src="images/hero.svg" width="480" height="360" alt="Illustration of a quiz card with four answer options, three hearts and a progress bar">
-      </div>
-    </section>
+    </header>
 
-    <section class="highlights" aria-labelledby="highlights-heading">
-      <h2 id="highlights-heading">Why drill with DevDrill</h2>
-      <ul class="card-grid">
-        <li class="card">
-          <h3>Interview-style questions</h3>
-          <p>Algorithms, data structures and OOP questions of the kind that show up in interviews, each with a short explanation.</p>
-        </li>
-        <li class="card">
-          <h3>Progress you can measure</h3>
-          <p>Accuracy, streaks and rounds played are tracked on your dashboard, so you can see yourself improving.</p>
-        </li>
-        <li class="card card-joke">
-          <h3>Daily dev joke</h3>
-          <p id="joke-text">There are 10 types of people: those who understand binary and those who don't.</p>
-        </li>
-        <li class="card">
-          <h3>Survival mode</h3>
-          <p>You get three lives. How long can your streak last before the third wrong answer?</p>
-        </li>
-        <li class="card">
-          <h3>Review what you missed</h3>
-          <p>Every wrong answer is saved, so you can replay only the questions that tripped you up.</p>
-        </li>
-        <li class="card">
-          <h3>Study mode</h3>
-          <p>Prefer no pressure? Flip through question cards at your own pace and reveal the answers.</p>
-        </li>
-      </ul>
-    </section>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-text">
+          <h1 id="hero-heading">Drill the concepts. Level up your code.</h1>
+          <p class="hero-lead">
+            Short CS quizzes with interview-style questions, three lives on the
+            line, and a dashboard that shows what to review next.
+          </p>
+          <a class="button" href="quiz.html">Start a drill</a>
+          <p class="hero-note">
+            Are you ready? It's free, with no sign-up. Your progress stays in
+            your browser.
+          </p>
+        </div>
+        <div class="hero-media">
+          <img
+            src="images/hero.svg"
+            width="480"
+            height="360"
+            alt="Illustration of a quiz card with four answer options, three hearts and a progress bar"
+          />
+        </div>
+      </section>
 
-    <section class="practice" aria-labelledby="practice-heading">
-      <h2 id="practice-heading">Practice concepts</h2>
-      <p class="section-intro">Pick a track to start. Live questions come from the Open Trivia Database; the algorithm, data structure, OOP and fun-fact tracks use a built-in question bank.</p>
-      <ul id="track-grid" class="card-grid"></ul>
-      <noscript><p><a href="quiz.html">Open the practice page</a> to choose a track.</p></noscript>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p class="footer-credit">&copy; 2026 Temi (Tope Jinad) &middot; WDD231 final project</p>
-      <nav aria-label="Footer">
-        <ul class="footer-links">
-          <!-- TODO: replace both "#" hrefs below with the real video URL and GitHub repo URL -->
-          <li><a href="#">Video demo</a></li>
-          <li><a href="attributions.html">Attributions</a></li>
-          <li><a href="#">GitHub</a></li>
+      <section class="highlights" aria-labelledby="highlights-heading">
+        <h2 id="highlights-heading">Why drill with DevDrill</h2>
+        <ul class="card-grid">
+          <li class="card">
+            <h3>Interview-style questions</h3>
+            <p>
+              Algorithms, data structures and OOP questions of the kind that
+              show up in interviews, each with a short explanation.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Progress you can measure</h3>
+            <p>
+              Accuracy, streaks and rounds played are tracked on your dashboard,
+              so you can see yourself improving.
+            </p>
+          </li>
+          <li class="card card-joke">
+            <h3>Daily dev joke</h3>
+            <p id="joke-text">
+              There are 10 types of people: those who understand binary and
+              those who don't.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Survival mode</h3>
+            <p>
+              You get three lives. How long can your streak last before the
+              third wrong answer?
+            </p>
+          </li>
+          <li class="card">
+            <h3>Review what you missed</h3>
+            <p>
+              Every wrong answer is saved, so you can replay only the questions
+              that tripped you up.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Study mode</h3>
+            <p>
+              Prefer no pressure? Flip through question cards at your own pace
+              and reveal the answers.
+            </p>
+          </li>
         </ul>
-      </nav>
-    </div>
-  </footer>
-</body>
+      </section>
+
+      <section class="practice" aria-labelledby="practice-heading">
+        <h2 id="practice-heading">Practice concepts</h2>
+        <p class="section-intro">
+          Pick a track to start. Live questions come from the Open Trivia
+          Database; the algorithm, data structure, OOP and fun-fact tracks use a
+          built-in question bank.
+        </p>
+        <ul id="track-grid" class="card-grid"></ul>
+        <noscript
+          ><p>
+            <a href="quiz.html">Open the practice page</a> to choose a track.
+          </p></noscript
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-credit">
+          &copy; 2026 Temi (Tope Jinad) &middot; WDD231 final project
+        </p>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <!-- TODO: replace both "#" hrefs below with the real video URL and GitHub repo URL -->
+            <li><a href="#">Video demo</a></li>
+            <li><a href="attributions.html">Attributions</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

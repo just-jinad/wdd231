@@ -1,35 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Submit feedback | DevDrill</title>
-  <meta name="description" content="Submit feedback or suggest a question for DevDrill.">
-  <meta name="author" content="Temi (Tope Jinad)">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;display=swap">
-  <link rel="stylesheet" href="styles/main.css">
-  <script>document.documentElement.classList.add('js');</script>
-  <script type="module" src="scripts/main.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header"><div class="header-inner">
-    <a class="brand" href="index.html"><img src="images/favicon.svg" width="32" height="32" alt=""><span>DevDrill</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="visually-hidden">Menu</span><span class="nav-toggle-icon" aria-hidden="true"></span></button>
-    <nav id="primary-nav" class="primary-nav" aria-label="Primary"><ul class="nav-list"><li><a href="index.html">Home</a></li><li><a href="quiz.html">Practice</a></li><li><a href="dashboard.html">Dashboard</a></li></ul></nav>
-  </div></header>
-  <main id="main" class="submit-page">
-    <section class="page-head"><h1>Submit feedback</h1><p>Help improve DevDrill by suggesting a question, reporting an issue or sharing feedback. Your submission is saved only in this browser.</p></section>
-    <form id="submit-form" class="submit-form">
-      <div class="field"><label class="field-label" for="submit-type">What would you like to submit?</label><select id="submit-type" name="type" required><option value="">Choose one</option><option>Question suggestion</option><option>Bug report</option><option>General feedback</option></select></div>
-      <div class="field"><label class="field-label" for="submit-name">Name <span>(optional)</span></label><input id="submit-name" name="name" type="text" maxlength="80" autocomplete="name"></div>
-      <div class="field"><label class="field-label" for="submit-message">Message</label><textarea id="submit-message" name="message" rows="7" maxlength="1000" required></textarea></div>
-      <button class="button" type="submit">Save submission</button>
-      <p id="submit-status" class="form-status" role="status" aria-live="polite"></p>
-    </form>
-  </main>
-  <footer class="site-footer"><div class="footer-inner"><p class="footer-credit">&copy; 2026 Temi (Tope Jinad) &middot; WDD231 final project</p><nav aria-label="Footer"><ul class="footer-links"><li><a href="dashboard.html">Dashboard</a></li><li><a href="attributions.html">Attributions</a></li></ul></nav></div></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Submit feedback | DevDrill</title>
+    <meta
+      name="description"
+      content="Submit feedback or suggest a question for DevDrill."
+    />
+    <meta name="author" content="Temi (Tope Jinad)" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script type="module" src="scripts/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"
+          ><img src="images/favicon.svg" width="32" height="32" alt="" /><span
+            >DevDrill</span
+          ></a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="visually-hidden">Menu</span
+          ><span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quiz.html">Practice</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="submit-page">
+      <section class="page-head">
+        <h1>Submit feedback</h1>
+        <p>
+          Help improve DevDrill by suggesting a question, reporting an issue or
+          sharing feedback. Your submission is saved only in this browser.
+        </p>
+      </section>
+      <form id="submit-form" class="submit-form">
+        <div class="field">
+          <label class="field-label" for="submit-type"
+            >What would you like to submit?</label
+          ><select id="submit-type" name="type" required>
+            <option value="">Choose one</option>
+            <option>Question suggestion</option>
+            <option>Bug report</option>
+            <option>General feedback</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="submit-name"
+            >Name <span>(optional)</span></label
+          ><input
+            id="submit-name"
+            name="name"
+            type="text"
+            maxlength="80"
+            autocomplete="name"
+          />
+        </div>
+        <div class="field">
+          <label class="field-label" for="submit-message">Message</label
+          ><textarea
+            id="submit-message"
+            name="message"
+            rows="7"
+            maxlength="1000"
+            required
+          ></textarea>
+        </div>
+        <button class="button" type="submit">Save submission</button>
+        <p
+          id="submit-status"
+          class="form-status"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-credit">
+          &copy; 2026 Temi (Tope Jinad) &middot; WDD231 final project
+        </p>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="attributions.html">Attributions</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,51 +1,66 @@
-import { TRACKS } from './tracks.js';
-import { getCached, setCached } from './storage.js';
+import { TRACKS } from "./tracks.js";
+import { getCached, setCached } from "./storage.js";
 
-const OTDB_URL = 'https://opentdb.com/api.php';
-const LOCAL_URL = 'data/questions.json'; 
-const MAX_PER_CALL = 50; 
+const OTDB_URL = "https://opentdb.com/api.php";
+const LOCAL_URL = "data/questions.json";
+const MAX_PER_CALL = 50;
 const TIMEOUT_MS = 8000;
 const CACHE_TTL_MS = 10 * 60 * 1000;
 
-
-export async function loadQuestions(trackKey, { amount = 15, difficulty, timeoutMs = TIMEOUT_MS } = {}) {
+export async function loadQuestions(
+  trackKey,
+  { amount = 15, difficulty, timeoutMs = TIMEOUT_MS } = {},
+) {
   const track = TRACKS[trackKey];
   if (!track) throw new Error(`Unknown track: ${trackKey}`);
 
-  if (track.source === 'api') {
+  if (track.source === "api") {
     try {
-      const questions = await fetchFromApi(trackKey, track, amount, difficulty, timeoutMs);
-      return { questions, source: 'api' };
+      const questions = await fetchFromApi(
+        trackKey,
+        track,
+        amount,
+        difficulty,
+        timeoutMs,
+      );
+      return { questions, source: "api" };
     } catch (err) {
-     
-      console.warn(`Open Trivia DB unavailable (${err.message}); using the local question bank.`);
+      console.warn(
+        `Open Trivia DB unavailable (${err.message}); using the local question bank.`,
+      );
     }
   }
 
-  const localTracks = track.source === 'api' ? track.fallback : [trackKey];
+  const localTracks = track.source === "api" ? track.fallback : [trackKey];
   const questions = await loadLocal(localTracks, amount, difficulty, timeoutMs);
-  return { questions, source: 'local' };
+  return { questions, source: "local" };
 }
 
 async function fetchFromApi(trackKey, track, amount, difficulty, timeoutMs) {
-  const cacheKey = `q:${trackKey}:${difficulty ?? 'any'}:${amount}`;
+  const cacheKey = `q:${trackKey}:${difficulty ?? "any"}:${amount}`;
   const cached = getCached(cacheKey, CACHE_TTL_MS);
   if (cached) return shuffle(cached);
 
   const params = new URLSearchParams({
     amount: Math.min(amount, MAX_PER_CALL),
     category: track.category,
-    type: 'multiple',
-    encode: 'url3986',
+    type: "multiple",
+    encode: "url3986",
   });
-  if (difficulty) params.set('difficulty', difficulty);
+  if (difficulty) params.set("difficulty", difficulty);
 
   const data = await fetchJson(`${OTDB_URL}?${params}`, timeoutMs);
-  if (data.response_code !== 0 || !Array.isArray(data.results) || data.results.length === 0) {
+  if (
+    data.response_code !== 0 ||
+    !Array.isArray(data.results) ||
+    data.results.length === 0
+  ) {
     throw new Error(`Open Trivia DB response_code ${data.response_code}`);
   }
 
-  const questions = data.results.map((item) => normalizeApiItem(item, trackKey));
+  const questions = data.results.map((item) =>
+    normalizeApiItem(item, trackKey),
+  );
   setCached(cacheKey, questions);
   return shuffle(questions);
 }
@@ -53,10 +68,16 @@ async function fetchFromApi(trackKey, track, amount, difficulty, timeoutMs) {
 async function loadLocal(trackKeys, amount, difficulty, timeoutMs) {
   const all = await fetchJson(LOCAL_URL, timeoutMs);
   const pool = all
-    .filter((q) => trackKeys.includes(q.track) && (!difficulty || q.difficulty === difficulty))
+    .filter(
+      (q) =>
+        trackKeys.includes(q.track) &&
+        (!difficulty || q.difficulty === difficulty),
+    )
     .map(normalizeLocalItem);
   if (pool.length === 0) {
-    throw new Error(`No local questions for ${trackKeys.join(', ')}${difficulty ? ` (${difficulty})` : ''}`);
+    throw new Error(
+      `No local questions for ${trackKeys.join(", ")}${difficulty ? ` (${difficulty})` : ""}`,
+    );
   }
   return shuffle(pool).slice(0, amount);
 }
@@ -78,7 +99,7 @@ const decode = (s) => {
   try {
     return decodeURIComponent(s);
   } catch {
-    return s; 
+    return s;
   }
 };
 
@@ -86,20 +107,20 @@ export function normalizeApiItem(item, trackKey) {
   const question = decode(item.question);
   const correct = decode(item.correct_answer);
   return {
-    id: `otdb-${hash(`${question}|${correct}`)}`, 
+    id: `otdb-${hash(`${question}|${correct}`)}`,
     track: trackKey,
     category: decode(item.category),
     difficulty: decode(item.difficulty),
     question,
     correct_answer: correct,
     incorrect_answers: item.incorrect_answers.map(decode),
-    explanation: '', 
-    source: 'api',
+    explanation: "",
+    source: "api",
   };
 }
 
 export function normalizeLocalItem(item) {
-  return { explanation: '', ...item, source: 'local' };
+  return { explanation: "", ...item, source: "local" };
 }
 
 export function hash(str) {
