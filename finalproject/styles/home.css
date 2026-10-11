@@ -1,0 +1,4 @@
+/* Home-page overrides are kept separate from the shared site stylesheet. */
+.home-page {
+  min-height: 1px;
+}

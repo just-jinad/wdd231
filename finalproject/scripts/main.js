@@ -3,6 +3,7 @@
 import { initNav } from './nav.js';
 import { renderTrackTiles } from './render.js';
 
+document.documentElement.classList.add('js');
 initNav();
 
 const trackGrid = document.querySelector('#track-grid');
