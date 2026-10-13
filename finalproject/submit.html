@@ -8,6 +8,18 @@
       name="description"
       content="Submit feedback or suggest a question for DevDrill.">
     <meta name="author" content="Temi (Tope Jinad)">
+    <meta property="og:title" content="Submit feedback | DevDrill">
+    <meta
+      property="og:description"
+      content="Submit feedback or suggest a question for the DevDrill CS quiz practice site.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DevDrill">
+    <meta
+      property="og:image"
+      content="https://just-jinad.github.io/wdd231/finalproject/images/hero.svg">
+    <meta
+      property="og:url"
+      content="https://just-jinad.github.io/wdd231/finalproject/submit.html">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -24,7 +36,7 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="index.html"
-          ><img src="images/favicon.svg" width="32" height="32" alt=""><span
+          ><img src="images/favicon.svg" width="32" height="32" loading="lazy" alt=""><span
             >DevDrill</span
           ></a
         >
@@ -54,7 +66,7 @@
           sharing feedback. Your submission is saved only in this browser.
         </p>
       </section>
-      <form id="submit-form" class="submit-form">
+      <form id="submit-form" class="submit-form" action="thankyou.html" method="get">
         <div class="field">
           <label class="field-label" for="submit-type"
             >What would you like to submit?</label
@@ -101,6 +113,12 @@
         </p>
         <nav aria-label="Footer">
           <ul class="footer-links">
+            <li>
+              <a
+                href="https://www.loom.com/share/1fd08be6be3245859892c8755a37fa8f"
+                >Video demonstration</a
+              >
+            </li>
             <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="attributions.html">Attributions</a></li>
           </ul>

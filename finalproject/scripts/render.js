@@ -16,7 +16,6 @@ export function trackTileHTML([key, track]) {
   return `
     <li class="tile-item">
       <a class="tile" href="quiz.html?track=${encodeURIComponent(key)}">
-        <!-- <img src="images/track-${esc(key)}.svg" width="56" height="56" alt="" loading="lazy"> -->
         <h3>${esc(track.label)}</h3>
         <p>${esc(track.blurb)}</p>
         <span class="badge">${esc(SOURCE_BADGE[track.source])}</span>
