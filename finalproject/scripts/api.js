@@ -37,6 +37,7 @@ export async function loadQuestions(
 }
 
 async function fetchFromApi(trackKey, track, amount, difficulty, timeoutMs) {
+  
   const cacheKey = `q:${trackKey}:${difficulty ?? "any"}:${amount}`;
   const cached = getCached(cacheKey, CACHE_TTL_MS);
   if (cached) return shuffle(cached);
@@ -94,7 +95,6 @@ async function fetchJson(url, timeoutMs) {
   }
 }
 
-// ---- Normalization: both sources end up with the same shape ----------------
 const decode = (s) => {
   try {
     return decodeURIComponent(s);

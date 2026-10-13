@@ -1,7 +1,4 @@
 import { TRACKS } from "./tracks.js";
-
-// Escape anything interpolated into an HTML string. Question text can come from
-// a third-party API, so every dynamic value goes through this.
 export function esc(value) {
   return String(value).replace(
     /[&<>"']/g,
