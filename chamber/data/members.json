@@ -26,7 +26,7 @@
       "address": "21 Aleshinloye Street, Ogbomoso, Oyo State",
       "phone": "+234 807 555 0103",
       "website_url": "https://ogbomosobakes.example.com",
-      "image_file_name": "./images/pastries.jpg",
+      "image_file_name": "./images/pastries.webp",
       "membership_level": 2,
       "category": "Food & Beverage"
     },
@@ -97,7 +97,7 @@
       "address": "8 Igbeti Road, Ogbomoso, Oyo State",
       "phone": "+234 811 555 0110",
       "website_url": "https://greenfieldsfarm.example.com",
-      "image_file_name": "./images/greenfield.jpg",
+      "image_file_name": "./images/greenfield.webp",
       "membership_level": 2,
       "category": "Agriculture"
     }
