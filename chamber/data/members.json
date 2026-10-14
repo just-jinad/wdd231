@@ -36,7 +36,7 @@
       "address": "9 Old Ipetu Road, Ogbomoso, Oyo State",
       "phone": "+234 802 555 0104",
       "website_url": "https://tayemotors.example.com",
-      "image_file_name": "./images/motors_parts.jpg",
+      "image_file_name": "./images/motors_parts.webp",
       "membership_level": 2,
       "category": "Automotive"
     },
@@ -66,7 +66,7 @@
       "address": "44 Sabo Road, Ogbomoso, Oyo State",
       "phone": "+234 813 555 0107",
       "website_url": "https://kaystonetech.example.com",
-      "image_file_name": "./images/tech_hub.jpg",
+      "image_file_name": "./images/tech_hub.webp",
       "membership_level": 3,
       "category": "Technology"
     },
