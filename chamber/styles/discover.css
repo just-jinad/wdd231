@@ -46,24 +46,24 @@
   gap: var(--space-lg);
   grid-template-columns: 1fr;
   grid-template-areas:
-    "a"
-    "b"
-    "c"
-    "d"
-    "e"
-    "f"
-    "g"
-    "h";
+    "featured"
+    "card-two"
+    "card-three"
+    "card-four"
+    "card-five"
+    "card-six"
+    "card-seven"
+    "card-eight";
 }
 
-.discover-card:nth-child(1) { grid-area: a; }
-.discover-card:nth-child(2) { grid-area: b; }
-.discover-card:nth-child(3) { grid-area: c; }
-.discover-card:nth-child(4) { grid-area: d; }
-.discover-card:nth-child(5) { grid-area: e; }
-.discover-card:nth-child(6) { grid-area: f; }
-.discover-card:nth-child(7) { grid-area: g; }
-.discover-card:nth-child(8) { grid-area: h; }
+.discover-card:nth-child(1) { grid-area: featured; }
+.discover-card:nth-child(2) { grid-area: card-two; }
+.discover-card:nth-child(3) { grid-area: card-three; }
+.discover-card:nth-child(4) { grid-area: card-four; }
+.discover-card:nth-child(5) { grid-area: card-five; }
+.discover-card:nth-child(6) { grid-area: card-six; }
+.discover-card:nth-child(7) { grid-area: card-seven; }
+.discover-card:nth-child(8) { grid-area: card-eight; }
 
 /* ---------- Card internals: named areas too ---------- */
 .discover-card {
@@ -128,11 +128,11 @@
   .discover-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "a a"
-      "b c"
-      "d d"
-      "e f"
-      "g h";
+      "featured featured"
+      "card-two card-three"
+      "card-four card-four"
+      "card-five card-six"
+      "card-seven card-eight";
   }
 
   /* Reserve two title lines so images line up across a row even when one title wraps. */
@@ -182,9 +182,9 @@
   .discover-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "a a b"
-      "c d e"
-      "f g h";
+      "featured featured card-two"
+      "card-three card-four card-five"
+      "card-six card-seven card-eight";
   }
 
   /* Reset the medium featured layout for card 4; only card 1 stays featured here. */
