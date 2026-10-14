@@ -69,7 +69,9 @@
 .discover-card {
   background-color: var(--color-bg-card);
   border: 1px solid var(--color-border);
+  content-visibility: auto;
   border-radius: var(--radius);
+  contain-intrinsic-size: 0 26rem;
   display: grid;
   gap: var(--space-sm);
   grid-template-areas:

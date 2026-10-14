@@ -20,6 +20,7 @@ function buildCard(place, index) {
   img.height = 200;
   // First card stays eager so it isn't penalised as a lazy LCP candidate.
   img.loading = index === 0 ? "eager" : "lazy";
+  img.fetchPriority = index === 0 ? "high" : "auto";
   img.decoding = "async";
   figure.append(img);
 
