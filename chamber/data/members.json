@@ -6,7 +6,7 @@
       "address": "12 Takie Road, Ogbomoso, Oyo State",
       "phone": "+234 803 555 0101",
       "website_url": "https://adireheritage.example.com",
-      "image_file_name": "./images/takie_wares.jpg",
+      "image_file_name": "./images/takie_wares.webp",
       "membership_level": 3,
       "category": "Retail & Fashion"
     },
