@@ -54,6 +54,7 @@
     "card-six"
     "card-seven"
     "card-eight";
+  min-height: 168rem;
 }
 
 .discover-card:nth-child(1) { grid-area: featured; }
@@ -135,6 +136,7 @@
       "card-four card-four"
       "card-five card-six"
       "card-seven card-eight";
+    min-height: 90rem;
   }
 
   /* Reserve two title lines so images line up across a row even when one title wraps. */
@@ -187,6 +189,7 @@
       "featured featured card-two"
       "card-three card-four card-five"
       "card-six card-seven card-eight";
+    min-height: 52rem;
   }
 
   /* Reset the medium featured layout for card 4; only card 1 stays featured here. */
