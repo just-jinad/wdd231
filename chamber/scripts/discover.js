@@ -1,5 +1,3 @@
-import { places } from "../data/places.mjs";
-
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
 const VISIT_KEY = "ogbomoso-cc-last-visit";
 
@@ -48,9 +46,22 @@ function buildCard(place, index) {
   return card;
 }
 
-function renderCards() {
+async function renderCards() {
   const grid = document.querySelector("#discover-grid");
-  if (!grid) return;
+  if (!grid) {
+    throw new Error("Discover card container was not found.");
+  }
+
+  const response = await fetch("./data/places.json");
+  if (!response.ok) {
+    throw new Error(`Could not load Discover data (${response.status}).`);
+  }
+
+  const places = await response.json();
+  if (!Array.isArray(places) || places.length !== 8) {
+    throw new Error("Discover data must contain exactly eight places.");
+  }
+
   grid.replaceChildren(...places.map(buildCard));
 }
 
@@ -97,5 +108,8 @@ function showVisitMessage() {
   }
 }
 
-renderCards();
 showVisitMessage();
+
+renderCards().catch((error) => {
+  console.error("Could not render Discover cards:", error);
+});
