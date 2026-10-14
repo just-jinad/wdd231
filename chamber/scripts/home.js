@@ -1,5 +1,6 @@
 const LAT = 8.13;
 const LON = 4.24;
+const WEATHER_ICON = "./images/openweathersun.webp";
 
 const membershipLabels = {
   1: "Member",
@@ -30,7 +31,7 @@ function renderCurrentWeather(data) {
   document.querySelector("#current-desc").textContent = data.weather[0].description;
 
   const icon = document.querySelector("#weather-icon");
-  icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  icon.src = WEATHER_ICON;
   icon.alt = data.weather[0].description;
 }
 
@@ -49,7 +50,7 @@ function renderForecast(data) {
     const li = document.createElement("li");
     li.innerHTML = `
       <span class="forecast-day">${label}</span>
-      <img src="https://openweathermap.org/img/wn/${entry.weather[0].icon}.png" alt="${entry.weather[0].description}" width="40" height="40">
+      <img src="${WEATHER_ICON}" alt="${entry.weather[0].description}" width="40" height="40" loading="lazy">
       <span class="forecast-temp">${Math.round(entry.main.temp)}\u00b0C</span>
     `;
     list.appendChild(li);
