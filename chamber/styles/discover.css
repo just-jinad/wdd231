@@ -91,7 +91,6 @@
   font-style: normal;
 }
 .discover-card p      { grid-area: desc; font-size: 0.9rem; }
-.card-button          { grid-area: action; }
 
 .discover-card img {
   aspect-ratio: 3 / 2;
@@ -104,6 +103,7 @@
 .card-button {
   background-color: var(--color-primary);
   border-radius: var(--radius);
+  grid-area: action;
   /* Card background as text colour keeps AA contrast in both light and dark themes. */
   color: var(--color-bg-card);
   font-weight: 700;
